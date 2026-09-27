@@ -72,7 +72,8 @@ export const nav = [
           }
         ]
       },
-      { text: 'Pembaruan versi', link: '/releases/' }
+      { text: 'Pembaruan versi', link: '/releases/' },
+      { text: 'Argakuka', link: 'https://argakuka.com' }
     ] satisfies DefaultTheme.NavItem[]
 
 /** Sidebar per bagian. Urutan belajar diatur di sini, bukan di config utama. */

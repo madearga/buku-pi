@@ -72,7 +72,8 @@ export const nav = [
           }
         ]
       },
-      { text: 'Releases', link: '/en/releases/' }
+      { text: 'Releases', link: '/en/releases/' },
+      { text: 'Argakuka', link: 'https://argakuka.com' }
     ] satisfies DefaultTheme.NavItem[]
 
 /** English sidebars per section. Learning order lives here, not in the main config. */
