@@ -89,3 +89,8 @@ Jumlah file input, jumlah entri indeks, dan jumlah item selesai di progres semua
 ## Pemulihan kegagalan
 
 Setelah interupsi, baca dulu progres dan output yang ada; jangan menjalankan ulang dari awal secara membabi buta. Jika menemukan duplikat, pertahankan kondisi lapangan, daftarkan item duplikat beserta asalnya, baru putuskan perbaikannya; jika file rusak, tulis ke daftar kegagalan lalu berhenti.
+
+
+## Pilihan: Pi Durable
+
+Jika Anda hendak membangun aplikasi Agent yang dapat melanjutkan tugas setelah prosesnya terputus, lanjutkan ke [Pi Durable: Agent yang terus bekerja setelah interupsi](/guide/pi-durable). Ia adalah kerangka kerja eksperimental, dan latihan file progres yang sudah ada di buku ini tetap dapat diselesaikan sendiri.

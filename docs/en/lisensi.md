@@ -23,7 +23,7 @@ The Indonesian text across the learning path, case studies, and reference guide 
 
 Some pages contain third-party material that does **not** automatically fall under the licenses above:
 
-- Earendil article translations in the licensed translations section follow the original authors' **CC BY 4.0**.
+- Earendil article translations in the licensed translations section follow the original authors' **CC BY 4.0**. The session replay data used by the page “You Said No MCP!” (`docs/.vitepress/theme/data/earendil-codemode-replay.json`) comes from the demonstration in the original article, its copyright belongs to Earendil, and it does not fall under this repository's MIT License.
 - Quoted tweets, screenshots, product images, and trademarks remain with their respective owners.
 - Product and brand names mentioned here are used for identification and explanation, not as a claim of ownership.
 

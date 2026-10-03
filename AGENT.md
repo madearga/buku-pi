@@ -10,48 +10,38 @@ panjang, dan verifikasi keamanan.
 Proyek sumber: <https://github.com/xiaomoBoy/pi-bluebook> (MIT License).
 Edisi ini adalah karya turunan; atribusi tidak boleh dihapus.
 
-## Struktur
+## File mana yang dibaca lebih dulu
 
-- `docs/` — akar VitePress. Satu bahasa: Indonesia.
-  - `docs/.vitepress/config.mts` — bahasa, tema, navigasi, SEO, hreflang, footer.
-  - `docs/.vitepress/config/navigation.mts` — nav + sidebar (satu-satunya tempat urutan belajar).
-  - `docs/.vitepress/theme/` — tema kustom dan komponen (mis. `PiReleaseExplorer.vue`).
-  - `docs/.vitepress/data/pi-releases.json` — data changelog resmi; **tetap bahasa Inggris**.
-  - `docs/public/examples/` — berkas contoh yang diunduh pembaca (Bahasa Indonesia).
-  - `docs/public/images/`, `docs/public/images/diagrams/` — aset.
-- `.translation/` — aturan terjemahan (`BRIEF.md`) dan glosarium (`GLOSSARY.md`).
-- `scripts/` — pemeriksa konten, konsistensi judul, SEO, dan ID hasil build.
-- `docs/diagrams/*.html` — sumber diagram dari proyek asal; tidak ikut dibangun/di-deploy.
+| Tugas | Acuan |
+| --- | --- |
+| Mengubah navigasi, konfigurasi, gaya, komponen, skrip, atau build & deploy | [`MAINTENANCE.md`](MAINTENANCE.md): pintu masuk perubahan, perintah umum, pemeriksaan, dan alur deploy |
+| Menulis atau mengubah materi pelajaran, studi kasus, gambar, dan materi pendukung | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
+| Merapikan tulisan panjang menjadi bab lalu menerbitkannya | [`EDITORIAL_WORKFLOW.md`](EDITORIAL_WORKFLOW.md) |
 
-## Perintah
+Lingkungan: Node.js 22 (lihat `.nvmrc`), npm, VitePress 1.6.4.
 
-```bash
-npm install
-npm run docs:dev            # server pengembangan
-npm run docs:build          # build produksi (docs/.vitepress/dist)
-npm run check:content       # semua rujukan lokal bisa diselesaikan
-npm run check:consistency   # label nav & prev/next cocok dengan judul halaman
-npm run check:pages         # anchor/ID di HTML hasil build benar-benar ada
-npm run check               # konten + konsistensi + build + SEO + anchor
-npm run sync:pi-releases    # memperbarui data changelog dari sumber resmi
-```
+Aturan terjemahan dan daftar istilah ada di `.translation/BRIEF.md` dan `.translation/GLOSSARY.md`.
+Struktur direktori lihat [`README.md`](README.md)「Struktur proyek」.
 
-## Aturan penulisan
+## Yang harus dipatuhi
 
-- Bahasa Indonesia, "Anda" untuk pembaca, istilah teknis mengikuti `.translation/GLOSSARY.md`.
-- Gunakan **"file"**, bukan "berkas", agar seragam.
-- Judul halaman (`frontmatter.title`) adalah sumber kebenaran untuk label navigasi; label sidebar
-  boleh lebih pendek, tetapi label `prev.text`/`next.text` harus sama dengan judul halaman tujuan
-  (jalankan `npm run check:consistency -- --fix`).
-- Di dalam blok kode: perintah, flag, path, dan identifier tidak diubah; teks yang dibaca manusia
-  (prompt contoh, materi, keluaran yang diharapkan, komentar) ditulis dalam Bahasa Indonesia.
-- Frontmatter: nilai yang mengandung `:` diikuti spasi **harus** dibungkus tanda kutip tunggal.
-- Jangan mengubah anchor/ID hasil build tanpa memperbarui tautannya; `npm run check:pages`
-  memverifikasi hal ini.
+- Situs ini dua bahasa: edisi Indonesia di akar `docs/` dan edisi English di `docs/en/`. Setiap
+  halaman baru di satu edisi wajib punya pasangannya di edisi lain dengan struktur yang sepadan
+  (judul, blok kode, daftar, tabel); `npm run check:i18n` memverifikasi hal ini.
+- Perubahan pada jalur belajar, navigasi, atau berkas halaman harus diikuti pemeriksaan pintu masuk
+  dan sidebar di `docs/.vitepress/config/navigation.mts` dan `navigation.en.mts`.
+- Jangan menulis dugaan, pernyataan model, atau informasi di luar tangkapan layar sebagai fakta yang
+  sudah diverifikasi; konten yang mudah berubah seperti versi, autentikasi, dan dukungan model harus
+  mencantumkan tanggal verifikasi.
+- Jangan menimpa data `docs/.vitepress/data/pi-releases.json` dengan terjemahan; isinya mengikuti
+  changelog resmi berbahasa Inggris.
+- Pertahankan konten yang tidak berkaitan dengan tugas saat ini; jangan mengubah materi asli untuk
+  menggantikan naskah yang sudah dirapikan.
+- Jangan meng-commit `node_modules/`, cache VitePress, hasil build, log, atau kredensial.
 
-## Batas perubahan
+## Verifikasi
 
-- Jangan menambahkan locale kedua tanpa menyesuaikan navigasi, pencarian, dan `transformPageData`.
-- Jangan menimpa data `pi-releases.json` dengan terjemahan: isinya mengikuti changelog resmi.
-- Perubahan pada `.vitepress/config.mts` memengaruhi SEO dan URL kanonik; uji dengan
-  `PI_SITE_URL` yang sesuai sebelum deploy.
+- Bila hanya mengubah penjelasan repositori, periksa teks, perintah, dan tautan.
+- Setelah mengubah pelajaran, navigasi, tema, atau gaya, jalankan `npm run check`.
+- Periksa bahwa halaman baru dapat dicapai dari navigasi atau bagian terkait, dan path gambar serta
+  materi unduhan valid.

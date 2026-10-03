@@ -163,3 +163,8 @@ Three independent signals must line up: the source file count is 3, the index en
 The tmux-related notes were verified on 2026-09-09.
 
 tmux can keep a terminal session alive, but it will not automatically recover Pi after a VPS reboot, a process crash, or running out of memory. For tmux's own commands and session lifecycle, see also the [official tmux manual](https://github.com/tmux/tmux/wiki/Getting-Started).
+
+
+## Optional: Pi Durable
+
+If you are going to build an Agent application that resumes tasks after its process is interrupted, continue with [Pi Durable: keeping an Agent working after an interruption](/en/guide/pi-durable). It is an experimental framework, and the progress-file exercise already in this book can still be completed on its own.

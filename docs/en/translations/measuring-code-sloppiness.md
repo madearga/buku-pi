@@ -5,8 +5,8 @@ prev:
   text: An Invitation to Begin a Correspondence
   link: /en/translations/invitation
 next:
-  text: Earendil's Officially Licensed Translations
-  link: /en/translations/
+  text: “You Said No MCP!”
+  link: /en/translations/you-said-no-mcp
 ---
 
 <span class="library-status">Officially licensed Earendil translation · 11</span>
@@ -84,4 +84,5 @@ This document is the complete English edition of the original Earendil text. The
 
 - [Original English text: If coding is solved, what now?: Measuring the sloppiness of code](https://earendil.com/posts/measuring-code-sloppiness/)
 - [Previous: An Invitation to Begin a Correspondence](/en/translations/invitation)
+- [Next: “You Said No MCP!”](/en/translations/you-said-no-mcp)
 - [Back: The list of officially licensed translations](/en/translations/)

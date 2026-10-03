@@ -201,9 +201,9 @@ Jalankan dulu kebutuhan yang sama secara manual sampai berhasil, lalu rapikan pr
 
 **Jawaban singkat: Tentukan dulu apakah yang Anda kurang adalah “metode mengerjakan sesuatu”, atau antarmuka tool eksternal yang perlu dipanggil secara stabil.**
 
-Proses tetap, standar pemeriksaan, dan materi referensi sebaiknya ditulis sebagai Skill; untuk pekerjaan yang sudah bisa dituntaskan dengan jelas oleh CLI yang ada, biarkan dulu Pi membaca bantuan dan memanggil CLI tersebut. Core Pi saat ini tidak menyertakan MCP secara bawaan; hanya ketika memang perlu mengekspos kemampuan eksternal secara terstruktur dan bersedia menanggung biaya penjelasan tool, autentikasi, dan pemeliharaan, barulah sambungkan MCP melalui Extension atau Package.
+Proses tetap, standar pemeriksaan, dan materi referensi sebaiknya ditulis sebagai Skill; untuk pekerjaan yang sudah bisa dituntaskan dengan jelas oleh CLI yang ada, biarkan dulu Pi membaca bantuan dan memanggil CLI tersebut. Sejak 0.99.0, Pi mendukung MCP dalam bentuk Ekstensi bawaan, sehingga server dapat ditambahkan dengan `pi mcp add`, dan hadir pula Codemode: model menulis skrip JavaScript untuk memanggil tool (menurut [changelog resmi](/releases/#release-v0-99-0), diverifikasi pada 2026-10-01). Meski begitu, sambungkan server MCP hanya ketika memang perlu mengekspos kemampuan eksternal secara terstruktur dan bersedia menanggung biaya penjelasan tool, autentikasi, dan pemeliharaan.
 
-**Baca lanjutan:** [Skill](/reference/glossary#skill) · [Tool / Tool Call](/reference/glossary#tool-tool-call) · [Skill, Extension, dan Package](/guide/skills-extensions-packages)
+**Baca lanjutan:** [Skill](/reference/glossary#skill) · [Tool / Tool Call](/reference/glossary#tool-tool-call) · [Skill, Extension, dan Package](/guide/skills-extensions-packages) · [“Anda Dulu Bilang Tidak Butuh MCP!”](/translations/you-said-no-mcp)
 
 ## Apakah Extension makin banyak makin baik? {#more-extensions-better}
 

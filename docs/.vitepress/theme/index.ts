@@ -122,6 +122,9 @@ function enhanceTweetArchive() {
       const targetPage = Number(entry.dataset.archivePage || 0)
       renderPage(targetPage, false)
       directory.open = false
+      // VitePress menangani klik lebih dulu dan mengukur sebelum perpindahan halaman
+      // serta penutupan daftar; gulirkan lagi setelah semuanya diterapkan.
+      window.requestAnimationFrame(() => entry.scrollIntoView({ block: 'start' }))
     })
     item.append(link)
     list.append(item)
@@ -250,6 +253,10 @@ export default {
     app.component(
       'PiReleaseExplorer',
       defineAsyncComponent(() => import('./components/PiReleaseExplorer.vue'))
+    )
+    app.component(
+      'PiCodemodeReplay',
+      defineAsyncComponent(() => import('./components/PiCodemodeReplay.vue'))
     )
     if (typeof window === 'undefined') return
     // VitePress also decodes the fragment while rendering language links.

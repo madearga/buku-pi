@@ -5,8 +5,8 @@ prev:
   text: Undangan untuk Memulai Korespondensi
   link: /translations/invitation
 next:
-  text: Terjemahan Berlisensi Resmi Earendil
-  link: /translations/
+  text: '“Anda Dulu Bilang Tidak Butuh MCP!”'
+  link: /translations/you-said-no-mcp
 ---
 
 <span class="library-status">Terjemahan berlisensi resmi Earendil · 11</span>
@@ -84,4 +84,5 @@ Artikel ini adalah terjemahan bahasa Indonesia lengkap dari teks asli Earendil. 
 
 - [Teks asli bahasa Inggris: If coding is solved, what now?: Measuring the sloppiness of code](https://earendil.com/posts/measuring-code-sloppiness/)
 - [Sebelumnya: Undangan untuk memulai korespondensi](/translations/invitation)
+- [Berikutnya: “Anda Dulu Bilang Tidak Butuh MCP!”](/translations/you-said-no-mcp)
 - [Kembali: Daftar terjemahan berlisensi resmi](/translations/)

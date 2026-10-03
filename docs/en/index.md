@@ -76,7 +76,7 @@ description: A systematic Pi Coding Agent tutorial for beginners, starting from 
       <a class="bluebook-map__item" href="/en/translations/">
         <span>06 · AUTHORIZED TRANSLATIONS</span>
         <h3>Licensed Translations</h3>
-        <p>Eleven complete English translations published under license from Earendil, preserving the original information, license statements, and image attribution.</p>
+        <p>Fourteen complete English translations published under license from Earendil, preserving the original information, license statements, and image attribution.</p>
         <b>Enter the translation section →</b>
       </a>
     </div>

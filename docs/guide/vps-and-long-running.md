@@ -163,3 +163,8 @@ Periksa tiga sinyal independen sekaligus: jumlah file sumber, jumlah entri indek
 Keterangan terkait tmux diverifikasi pada 2026-09-09.
 
 tmux dapat mempertahankan sesi terminal, tetapi tidak akan otomatis memulihkan Pi setelah VPS reboot, proses crash, atau kehabisan memori. Mengenai perintah dan siklus hidup sesi tmux itu sendiri, lihat juga [manual resmi tmux](https://github.com/tmux/tmux/wiki/Getting-Started).
+
+
+## Pilihan: Pi Durable
+
+Jika Anda hendak membangun aplikasi Agent yang dapat melanjutkan tugas setelah prosesnya terputus, lanjutkan ke [Pi Durable: Agent yang terus bekerja setelah interupsi](/guide/pi-durable). Ia adalah kerangka kerja eksperimental, dan latihan file progres yang sudah ada di buku ini tetap dapat diselesaikan sendiri.

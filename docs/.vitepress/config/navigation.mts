@@ -141,6 +141,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '13. Tugas jangka panjang & VPS', link: '/guide/vps-and-long-running' },
+            { text: 'Pilihan · Pi Durable', link: '/guide/pi-durable' },
             { text: '14. Izin, isolasi, dan verifikasi', link: '/guide/safety' }
           ]
         },
@@ -277,6 +278,8 @@ export const sidebar = {
           collapsed: false,
           items: [
             { text: 'Semua pembaruan versi', link: '/releases/' },
+            { text: 'Poin penting Pi 1.0.0', link: '/releases/pi-1-0' },
+            { text: 'Pengantar Pi Durable', link: '/guide/pi-durable' },
             { text: 'Memperbarui Pi dengan aman', link: '/guide/lifecycle-management' },
             { text: 'Panduan penanganan masalah', link: '/reference/troubleshooting' }
           ]
@@ -296,7 +299,7 @@ export const sidebar = {
           text: 'Daftar terjemahan',
           collapsed: true,
           items: [
-            { text: 'Ikhtisar sebelas terjemahan berlisensi', link: '/translations/' }
+            { text: 'Ikhtisar empat belas terjemahan berlisensi', link: '/translations/' }
           ]
         },
         {
@@ -314,7 +317,9 @@ export const sidebar = {
           items: [
             { text: 'Apa itu Agent Harness?', link: '/translations/what-is-a-harness' },
             { text: 'Harness ini milik saya', link: '/translations/mine-agent-harness' },
-            { text: 'Pi: minimalis tapi efisien', link: '/translations/pi-minimal-performant' }
+            { text: 'Pi: minimalis tapi efisien', link: '/translations/pi-minimal-performant' },
+            { text: 'Pi 1.0', link: '/translations/pi-1-0' },
+            { text: 'Pi Durable', link: '/translations/pi-durable' }
           ]
         },
         {
@@ -335,6 +340,13 @@ export const sidebar = {
           ]
         },
         {
+          text: 'Tool & MCP',
+          collapsed: true,
+          items: [
+            { text: '“Anda Dulu Bilang Tidak Butuh MCP!”', link: '/translations/you-said-no-mcp' }
+          ]
+        },
+        {
           text: 'Kembali ke Buku Pi',
           collapsed: true,
           items: [
@@ -350,6 +362,7 @@ export const sidebar = {
           items: [
             { text: 'Tulisan di luar Buku Pi', link: '/journey/' },
             { text: 'Mengapa sesi & konteks tetap di tangan kita', link: '/journey/why-pi-keeps-context-editable' },
+            { text: 'Mengapa Pi akhirnya menerima MCP', link: '/journey/pi-mcp-codemode' },
             { text: 'Arsip 98 tweet', link: '/tweets/' }
           ]
         },
@@ -381,6 +394,7 @@ export const sidebar = {
           items: [
             { text: 'Tulisan di luar Buku Pi', link: '/journey/' },
             { text: 'Mengapa sesi & konteks tetap di tangan kita', link: '/journey/why-pi-keeps-context-editable' },
+            { text: 'Mengapa Pi akhirnya menerima MCP', link: '/journey/pi-mcp-codemode' },
             { text: 'Arsip 98 tweet', link: '/tweets/' }
           ]
         },

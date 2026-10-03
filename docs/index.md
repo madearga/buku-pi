@@ -76,7 +76,7 @@ description: Tutorial sistematis Pi Coding Agent untuk pemula, mulai dari instal
       <a class="bluebook-map__item" href="/translations/">
         <span>06 · AUTHORIZED TRANSLATIONS</span>
         <h3>Terjemahan Berlisensi</h3>
-        <p>Sebelas terjemahan lengkap berbahasa Indonesia yang diterbitkan dengan lisensi dari Earendil, mempertahankan informasi asli, pernyataan lisensi, dan atribusi gambar.</p>
+        <p>Empat belas terjemahan lengkap berbahasa Indonesia yang diterbitkan dengan lisensi dari Earendil, mempertahankan informasi asli, pernyataan lisensi, dan atribusi gambar.</p>
         <b>Masuk ke area terjemahan →</b>
       </a>
     </div>

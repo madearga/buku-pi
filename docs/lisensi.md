@@ -23,7 +23,7 @@ Teks berbahasa Indonesia pada jalur belajar, studi kasus, dan buku panduan disus
 
 Sebagian halaman memuat materi pihak ketiga yang **tidak** otomatis ikut lisensi di atas:
 
-- Terjemahan artikel Earendil pada bagian terjemahan berlisensi mengikuti **CC BY 4.0** dari penulis aslinya.
+- Terjemahan artikel Earendil pada bagian terjemahan berlisensi mengikuti **CC BY 4.0** dari penulis aslinya. Data pemutaran ulang sesi yang dipakai halaman “Anda Dulu Bilang Tidak Butuh MCP!” (`docs/.vitepress/theme/data/earendil-codemode-replay.json`) berasal dari demo pada artikel asli, hak ciptanya milik Earendil, dan tidak tunduk pada MIT License repositori ini.
 - Kutipan tweet, tangkapan layar, gambar produk, dan merek dagang tetap milik pemiliknya masing-masing.
 - Nama produk dan merek yang disebut di sini dipakai untuk identifikasi dan penjelasan, bukan klaim kepemilikan.
 

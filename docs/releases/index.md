@@ -13,6 +13,10 @@ Untuk mencari dari versi mana suatu fitur muncul, apa yang berubah dalam satu pe
 
 Halaman ini menyusun `CHANGELOG.md` resmi Pi Coding Agent menjadi arsip yang dapat ditelusuri. **Nomor versi, tanggal rilis, dan rincian perubahan berbahasa Inggris semuanya berasal dari catatan resmi**; bahasa Indonesia hanya dipakai untuk tag pencarian, kategori, dan penjelasan lima titik kunci, tanpa menambahkan dugaan menjadi fakta resmi. Changelog resmi saat ini dimulai dari `0.10.0`, dan halaman ini tidak mengarang konten pembaruan versi yang lebih awal.
 
+## Topik khusus Pi 1.0
+
+Pi 1.0.0 yang dirilis pada 1 Oktober 2026 sudah termuat dalam arsip lengkap di bawah. Anda dapat membaca dulu [poin penting pembaruannya](/releases/pi-1-0), lalu [terjemahan artikel rilis resminya](/translations/pi-1-0). Kerangka kerja eksperimental yang dirilis pada periode yang sama dibahas tersendiri di [panduan pengantar Pi Durable](/guide/pi-durable).
+
 <PiReleaseExplorer />
 
 ## Batas Data dan Cara Pemeliharaan

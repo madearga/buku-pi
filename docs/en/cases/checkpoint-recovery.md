@@ -89,3 +89,8 @@ The number of input files, the number of index entries, and the number of comple
 ## Failure Recovery
 
 After an interruption, read the existing progress and output first; do not blindly re-run from the start. If you find duplicates, preserve the field state, list the duplicate items together with where they came from, then decide on the fix; if a file is damaged, write it into the failure list and then stop.
+
+
+## Optional: Pi Durable
+
+If you are going to build an Agent application that resumes tasks after its process is interrupted, continue with [Pi Durable: keeping an Agent working after an interruption](/en/guide/pi-durable). It is an experimental framework, and the progress-file exercise already in this book can still be completed on its own.

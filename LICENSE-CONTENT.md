@@ -20,11 +20,15 @@ Repositori ini mempertahankan pernyataan hak cipta di atas dan tautan lisensi pr
 
 ## Terjemahan berlisensi resmi Earendil
 
-Terjemahan Mandarin dan bagian adaptasi dari sebelas artikel Earendil di `docs/translations/`,
+Terjemahan bahasa Indonesia dan bagian adaptasi dari empat belas artikel Earendil di `docs/translations/`,
 diterbitkan di bawah
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)
 dengan izin Earendil. Halaman mempertahankan judul asli, penulis, tanggal terbit, tautan asli, dan keterangan lisensi; hak cipta naskah asli bahasa Inggris dimiliki Earendil.
 Gambar asli dipakai sesuai lisensi artikel terkait; halaman mempertahankan atribusi fotografer, pembuat gambar, atau sumber proyek aslinya; gambar-gambar ini tidak otomatis terkena MIT License konten orisinal situs hanya karena masuk ke repositori ini.
+
+`docs/.vitepress/theme/data/earendil-codemode-replay.json` menyimpan data pemutaran ulang sesi untuk artikel “Anda Dulu Bilang Tidak Butuh MCP!”, berasal dari [demo pada artikel asli](https://earendil.com/static/posts/you-said-no-mcp/codemode-replay.json). Data itu dipakai bersama terjemahan berlisensi ini, hak ciptanya milik Earendil, dan tidak tunduk pada MIT License repositori ini.
+
+Catatan otorisasi: pada 9 September 2026, Colin Hanna (Partner & CEO Earendil) menyetujui lewat surel penerbitan adaptasi dan terjemahan bahasa Indonesia atas artikel-artikel yang diajukan, serta persetujuan yang sama untuk artikel Earendil berikutnya; syaratnya adalah mempertahankan judul asli, penulis, tanggal terbit, dan tautan asli, serta mencantumkan “Adapted and translated with permission from Earendil.”, dengan bagian adaptasi diterbitkan di bawah CC BY 4.0.
 
 ## Edisi Bahasa Indonesia
 

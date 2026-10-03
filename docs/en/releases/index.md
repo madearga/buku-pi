@@ -13,6 +13,10 @@ To find out which version introduced a feature, what changed in a single version
 
 This page organizes Pi Coding Agent's official `CHANGELOG.md` into a searchable archive. **The version numbers, release dates, and English-language change details all come from the official notes**; only the search tags, categories, and explanations of the five key points are the Buku Pi's own content, and no guess is turned into an official fact. The official changelog currently starts at `0.10.0`, and this page does not invent release content for earlier versions.
 
+## Pi 1.0 special section
+
+Pi 1.0.0, released on 1 October 2026, is already included in the complete archive below. You can read its [release highlights](/en/releases/pi-1-0) first, then the [translated official release article](/en/translations/pi-1-0). The experimental framework released in the same period is covered separately in the [Pi Durable primer](/en/guide/pi-durable).
+
 <PiReleaseExplorer />
 
 ## Data Boundaries and How This Page Is Maintained

@@ -40,7 +40,7 @@ Edisi Bahasa Indonesia (di atas) dan edisi English di `/en/` (di bawah):
 | `/cases/` | 8 studi kasus praktik (CASE 01–08) dengan langkah dan daftar periksa |
 | `/reference/` | Referensi cepat: FAQ, panduan penanganan masalah, glosarium, perbandingan Pi/OMP/Selesai |
 | `/plugins/` | Rekomendasi plugin beserta cara memilih dan menilai risikonya |
-| `/translations/` | Terjemahan berlisensi artikel Earendil |
+| `/translations/` | Terjemahan berlisensi 14 artikel Earendil |
 | `/journey/`, `/tweets/` | Catatan penulis dan arsip 98 tweet |
 | `/releases/` | Arsip versi Pi (data resmi, penjelajah interaktif) |
 | `/about` | Tentang edisi ini dan pengelolanya |
@@ -186,7 +186,9 @@ scripts/                   # pemeriksa konten, SEO, dan tautan
 - Situs dan konten orisinal: **MIT License** (lihat `LICENSE`, `LICENSE-CONTENT.md`) —
   hak cipta dipegang oleh pemilik proyek sumber.
 - Terjemahan berlisensi Earendil pada `/translations/`: **CC BY 4.0**; hak atas konten pihak ketiga
-  tetap milik penulis aslinya.
+  tetap milik penulis aslinya. Data pemutaran ulang sesi pada
+  `docs/.vitepress/theme/data/earendil-codemode-replay.json` juga milik Earendil dan tidak tunduk
+  pada MIT License repositori ini.
 - Edisi Bahasa Indonesia ini adalah karya turunan. Pertahankan atribusi di atas bila Anda
   mempublikasikan ulang.
 

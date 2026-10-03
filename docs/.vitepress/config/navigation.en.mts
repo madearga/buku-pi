@@ -141,6 +141,7 @@ export const sidebar = {
           collapsed: true,
           items: [
             { text: '13. Long-running tasks and VPS', link: '/en/guide/vps-and-long-running' },
+            { text: 'Optional · Pi Durable', link: '/en/guide/pi-durable' },
             { text: '14. Permissions, isolation, and verification', link: '/en/guide/safety' }
           ]
         },
@@ -277,6 +278,8 @@ export const sidebar = {
           collapsed: false,
           items: [
             { text: 'All release notes', link: '/en/releases/' },
+            { text: 'Pi 1.0.0 highlights', link: '/en/releases/pi-1-0' },
+            { text: 'Pi Durable primer', link: '/en/guide/pi-durable' },
             { text: 'Updating Pi safely', link: '/en/guide/lifecycle-management' },
             { text: 'Troubleshooting guide', link: '/en/reference/troubleshooting' }
           ]
@@ -296,7 +299,7 @@ export const sidebar = {
           text: 'Translation index',
           collapsed: true,
           items: [
-            { text: 'Overview of eleven licensed translations', link: '/en/translations/' }
+            { text: 'Overview of fourteen licensed translations', link: '/en/translations/' }
           ]
         },
         {
@@ -314,7 +317,9 @@ export const sidebar = {
           items: [
             { text: 'What is an agent harness?', link: '/en/translations/what-is-a-harness' },
             { text: 'This harness is mine', link: '/en/translations/mine-agent-harness' },
-            { text: 'Pi: minimal yet efficient', link: '/en/translations/pi-minimal-performant' }
+            { text: 'Pi: minimal yet efficient', link: '/en/translations/pi-minimal-performant' },
+            { text: 'Pi 1.0', link: '/en/translations/pi-1-0' },
+            { text: 'Pi Durable', link: '/en/translations/pi-durable' }
           ]
         },
         {
@@ -335,6 +340,13 @@ export const sidebar = {
           ]
         },
         {
+          text: 'Tools and MCP',
+          collapsed: true,
+          items: [
+            { text: '“You Said No MCP!”', link: '/en/translations/you-said-no-mcp' }
+          ]
+        },
+        {
           text: 'Back to the Buku Pi',
           collapsed: true,
           items: [
@@ -350,6 +362,7 @@ export const sidebar = {
           items: [
             { text: 'Writing beyond the Buku Pi', link: '/en/journey/' },
             { text: 'Why sessions and context stay in your hands', link: '/en/journey/why-pi-keeps-context-editable' },
+            { text: 'Why Pi Embraced MCP After All', link: '/en/journey/pi-mcp-codemode' },
             { text: '98-tweet archive', link: '/en/tweets/' }
           ]
         },
@@ -381,6 +394,7 @@ export const sidebar = {
           items: [
             { text: 'Writing beyond the Buku Pi', link: '/en/journey/' },
             { text: 'Why sessions and context stay in your hands', link: '/en/journey/why-pi-keeps-context-editable' },
+            { text: 'Why Pi Embraced MCP After All', link: '/en/journey/pi-mcp-codemode' },
             { text: '98-tweet archive', link: '/en/tweets/' }
           ]
         },

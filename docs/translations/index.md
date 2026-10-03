@@ -1,6 +1,6 @@
 ---
 title: Terjemahan Berlisensi Resmi Earendil
-description: Terjemahan bahasa Indonesia lengkap dari sebelas artikel Earendil tentang Pi, Agent Harness, kualitas kode, dan visi perusahaan, yang diterbitkan dengan lisensi resmi Earendil.
+description: Terjemahan bahasa Indonesia lengkap dari empat belas artikel Earendil tentang Pi, Agent Harness, MCP, kualitas kode, dan visi perusahaan, yang diterbitkan dengan lisensi resmi Earendil.
 prev:
   text: Buku panduan referensi
   link: /reference/
@@ -13,7 +13,7 @@ next:
 
 # Terjemahan Berlisensi Resmi Earendil
 
-Di sini tersedia terjemahan bahasa Indonesia dari sebelas artikel Earendil tentang Pi, Agent Harness, mekanisme sesi, kualitas kode, dan visi perusahaan. Kesebelas terjemahan itu telah mendapat lisensi resmi dari Earendil dan diterjemahkan secara utuh sesuai teks aslinya.
+Di sini tersedia terjemahan bahasa Indonesia dari empat belas artikel Earendil tentang Pi, Agent Harness, mekanisme sesi, MCP, kualitas kode, dan visi perusahaan. Keempat belas terjemahan itu telah mendapat lisensi resmi dari Earendil dan diterjemahkan secara utuh sesuai teks aslinya.
 
 Setiap halaman mempertahankan judul asli, penulis, tanggal terbit, dan tautan ke teks asli, serta mencantumkan:
 
@@ -23,7 +23,7 @@ Terjemahan bahasa Indonesia beserta bagian adaptasinya diterbitkan di bawah [CC 
 
 ## Urutan bacaan yang disarankan
 
-Enam artikel pertama paling dekat dengan pembelajaran Pi: pahami dulu sesi, pemadatan konteks, dan cache, lalu kenali Harness, dan pahami Pi dari dua sudut pandang, yaitu seorang non-insinyur dan studi kasus performa. Artikel ketujuh hingga kesepuluh merekam latar belakang bergabungnya Pi ke Earendil, serta visi jangka panjang Earendil tentang perangkat lunak yang tepercaya dan personal. Artikel kesebelas membahas lebih jauh penilaian kualitas kode AI.
+Enam artikel pertama paling dekat dengan pembelajaran Pi: pahami dulu sesi, pemadatan konteks, dan cache, lalu kenali Harness, dan pahami Pi dari dua sudut pandang, yaitu seorang non-insinyur dan studi kasus performa. Artikel ketujuh hingga kesepuluh merekam latar belakang bergabungnya Pi ke Earendil, serta visi jangka panjang Earendil tentang perangkat lunak yang tepercaya dan personal. Artikel kesebelas membahas lebih jauh penilaian kualitas kode AI. Artikel kedua belas menjelaskan mengapa Pi mengubah pendiriannya dan mendukung MCP, serta bagaimana Codemode membuat model dapat memanggil tool lewat skrip. Artikel ketiga belas dan keempat belas memperkenalkan Pi 1.0 dan Pi Durable yang eksperimental.
 
 | Yang ingin Anda pahami sekarang | Sebaiknya baca dulu | Setelah selesai, kembali ke |
 | --- | --- | --- |
@@ -31,8 +31,10 @@ Enam artikel pertama paling dekat dengan pembelajaran Pi: pahami dulu sesi, pema
 | Mengapa percakapan panjang kehilangan detail | Tiga artikel: portabilitas sesi, pemadatan, dan prompt cache | [Modul tiga](/guide/context-and-compaction), [Eksperimen pemadatan](/cases/compaction-before-after) |
 | Kalau Agent sudah bisa berjalan, apakah kodenya sudah memenuhi syarat | “Mengukur kekasaran kode” “Pi: Minimal tetapi Efisien” | [Perbaikan kode](/cases/code-repair), [Proyek akhir](/cases/graduation-project) |
 | Ingin mengetahui latar belakang penulis dan perusahaan | Pengumuman, refleksi, posisi tertinggi, undangan korespondensi | Sebagai bacaan pilihan, bukan prasyarat instalasi |
+| Apakah Pi sekarang bisa memakai MCP | “Anda Dulu Bilang Tidak Butuh MCP!” | [Cara memilih Skill atau MCP](/reference/faq#skill-vs-mcp), [arsip versi](/releases/) |
+| Apa bedanya Pi 1.0 dan Durable | “Pi 1.0”, “Pi Durable” | [Poin penting pembaruan](/releases/pi-1-0), [bagian khusus Durable](/guide/pi-durable) |
 
-Jika Anda ingin membaca empat tema—sesi, pemadatan, cache, dan Harness—secara berangkai, Anda bisa lanjut ke [artikel pembacaan berangkai: Mengapa Pi Menyerahkan Sesi dan Konteks ke Tangan Anda](/journey/why-pi-keeps-context-editable). Ini adalah analisis pribadi dan bukan bagian dari sebelas terjemahan berlisensi di bawah ini.
+Jika Anda ingin membaca empat tema—sesi, pemadatan, cache, dan Harness—secara berangkai, Anda bisa lanjut ke [artikel pembacaan berangkai: Mengapa Pi Menyerahkan Sesi dan Konteks ke Tangan Anda](/journey/why-pi-keeps-context-editable). Ini adalah analisis pribadi dan bukan bagian dari keempat belas terjemahan berlisensi di bawah ini.
 
 ### 01 Sesi yang tidak bisa Anda bawa
 
@@ -144,6 +146,38 @@ Berangkat dari metrik seperti jumlah baris kode, tingkat kepanjangan, dan tingka
 
 [Baca terjemahan bahasa Indonesia](/translations/measuring-code-sloppiness) · [Lihat teks asli bahasa Inggris](https://earendil.com/posts/measuring-code-sloppiness/)
 
+### 12 “Anda Dulu Bilang Tidak Butuh MCP!”
+
+**Judul asli**　*“You Said No MCP!”*
+
+**Tanggal terbit**　2026-09-29
+
+Pi pernah menyatakan dengan jelas tidak menyertakan MCP, dan kini berubah menjadi mendukungnya. Artikel ini menjelaskan mengapa tim berubah pikiran, apa saja yang berubah pada MCP dan pada Pi, serta apa itu Codemode yang membuat model menulis skrip untuk memanggil tool.
+
+[Baca terjemahan bahasa Indonesia](/translations/you-said-no-mcp) · [Lihat teks asli bahasa Inggris](https://earendil.com/posts/you-said-no-mcp/)
+
+
+
+### 13 Pi 1.0
+
+**Judul asli**　*Pi 1.0*
+
+**Tanggal terbit**　2026-10-01
+
+Memperkenalkan pertimbangan desain di balik versi resmi Pi, Codemode, model virtual, pemuatan tool secara bertahap, dan mode layar penuh sebagai bawaan, serta menjelaskan posisi Pi Durable yang berdiri sendiri.
+
+[Baca terjemahan bahasa Indonesia](/translations/pi-1-0) · [Lihat teks asli bahasa Inggris](https://earendil.com/posts/pi-1-0/) · [Poin penting pembaruan 1.0.0](/releases/pi-1-0)
+
+### 14 Pi Durable
+
+**Judul asli**　*Pi Durable*
+
+**Tanggal terbit**　2026-10-01
+
+Memperkenalkan kerangka kerja eksperimental untuk aplikasi Agent yang berjalan lama, lengkap dengan kode dan demo pemulihan setelah crash, percakapan bersamaan, Ekstensi, tugas, pemadatan, status aplikasi, dan kolaborasi banyak pengguna.
+
+[Baca terjemahan bahasa Indonesia](/translations/pi-durable) · [Lihat teks asli bahasa Inggris](https://earendil.com/posts/pi-durable/) · [Bagian pengantar untuk pemula](/guide/pi-durable)
+
 ::: info Catatan terjemahan dan lisensi
-Hak cipta kesebelas teks asli bahasa Inggris dimiliki oleh Earendil. Terjemahan bahasa Indonesia beserta bagian adaptasinya diterbitkan di bawah [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) dengan lisensi dari Earendil. Terjemahan ini berupaya setia mempertahankan struktur, pandangan, contoh, gambar, dan tautan teks asli; jika ada ambiguitas, teks asli bahasa Inggris yang bersangkutan yang berlaku. Gambar pendamping teks asli digunakan sesuai lisensi artikel, dan kredit fotografer, pembuat grafik, atau sumber proyek tetap dicantumkan dalam terjemahan.
+Hak cipta keempat belas teks asli bahasa Inggris dimiliki oleh Earendil. Terjemahan bahasa Indonesia beserta bagian adaptasinya diterbitkan di bawah [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) dengan lisensi dari Earendil. Terjemahan ini berupaya setia mempertahankan struktur, pandangan, contoh, gambar, dan tautan teks asli; jika ada ambiguitas, teks asli bahasa Inggris yang bersangkutan yang berlaku. Gambar pendamping teks asli digunakan sesuai lisensi artikel, dan kredit fotografer, pembuat grafik, atau sumber proyek tetap dicantumkan dalam terjemahan.
 :::

@@ -91,3 +91,8 @@ Once installation is done, you do not have to stop at once to study maintenance 
 ## When you need to look something up instead of continuing the lessons
 
 Open the [Reference Guide](/en/reference/) and browse by topic: the [FAQ](/en/reference/faq) answers common questions, the [Troubleshooting guide](/en/reference/troubleshooting) starts from symptoms you are already seeing, and the [Glossary of popular terms](/en/reference/glossary) explains concepts you have not met yet. If you want to compare Pi with its forks, read the [Comparison of the OMP and Selesai Code paths](/en/reference/pi-forks). Personal experience, original tweet text, and changes in understanding are kept separately in [Learning notes](/en/journey/) and will not be mixed into the lesson conclusions.
+
+
+## Optional: Pi Durable
+
+If you are going to build an Agent application that resumes tasks after its process is interrupted, continue with [Pi Durable: keeping an Agent working after an interruption](/en/guide/pi-durable). It is an experimental framework, and the progress-file exercise already in this book can still be completed on its own.

@@ -21,13 +21,12 @@ Model dapat diganti sesuai versi yang tersedia saat itu, tetapi keempat tanggung
 4. **Penggabungan oleh editor utama**: Tulis ulang menurut “skenario → konsep → praktik → verifikasi → langkah berikutnya”, dan hanya masukkan fakta yang didukung naskah asli atau acuan resmi.
 5. **Pemeriksaan konten**: Periksa tautan, gambar, perintah, istilah, informasi versi dinamis, dan klaim non-resmi.
 6. **Verifikasi situs**: Selesaikan build resmi, lalu periksa judul, teks, tabel, blok kode, navigasi, dan overflow horizontal di desktop dan mobile 390px.
-7. **Jejak publikasi**: Commit ke `main`, pastikan deployment Cloudflare memakai commit terbaru, lalu periksa sampel halaman lewat domain resmi.
+7. **Jejak publikasi**: Commit ke `main`, pastikan deployment Vercel memakai commit terbaru, lalu periksa sampel halaman lewat domain resmi.
 
 ## Ambang Publikasi
 
+Penuhi dulu seluruh persyaratan di [`CONTRIBUTING.md`](CONTRIBUTING.md) dan `.translation/BRIEF.md`, lalu pastikan:
+
 - Pembaca tidak perlu menebak di mana materi latihan berada atau dari langkah mana memulai.
-- Setiap tindakan menjelaskan apa yang diharapkan muncul, dan setidaknya memberi satu jalur pemulihan setelah kegagalan.
-- Batasan dalam prompt tidak digambarkan sebagai izin sistem atau jaminan sandbox.
-- Fakta dinamis disertai sumber resmi dan tanggal verifikasi; konten yang belum bisa dipastikan ditandai sebagai draf atau menunggu verifikasi.
-- Tangkapan layar hanya membuktikan isi yang benar-benar terlihat di dalamnya, bukan pengganti langkah di teks.
+- Fakta dinamis yang belum bisa dipastikan ditandai sebagai draf atau menunggu verifikasi, dan tidak ditulis sebagai kesimpulan resmi.
 - Kata “selesai” dalam artikel harus bersesuaian dengan file, halaman, hasil perintah, atau diff yang bisa diperiksa secara independen.

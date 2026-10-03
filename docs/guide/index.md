@@ -91,3 +91,8 @@ Setelah instalasi selesai, Anda tidak perlu langsung berhenti untuk mempelajari 
 ## Saat perlu mencari, bukan melanjutkan pelajaran
 
 Buka [Buku panduan referensi](/reference/) dan telusuri berdasarkan topik: [FAQ](/reference/faq) menjawab pertanyaan umum, [Panduan penanganan masalah](/reference/troubleshooting) mulai dari gejala yang sudah terjadi, dan [Daftar istilah populer](/reference/glossary) menjelaskan konsep yang belum dikenal. Jika ingin membandingkan Pi dengan turunannya, bacalah [Perbandingan jalur OMP dan Selesai Code](/reference/pi-forks). Pengalaman pribadi, teks asli tweet, dan perubahan pemahaman disimpan terpisah di [Catatan belajar](/journey/) dan tidak akan tercampur ke kesimpulan pelajaran.
+
+
+## Pilihan: Pi Durable
+
+Jika Anda hendak membangun aplikasi Agent yang dapat melanjutkan tugas setelah prosesnya terputus, lanjutkan ke [Pi Durable: Agent yang terus bekerja setelah interupsi](/guide/pi-durable). Ia adalah kerangka kerja eksperimental, dan latihan file progres yang sudah ada di buku ini tetap dapat diselesaikan sendiri.

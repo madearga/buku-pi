@@ -201,9 +201,9 @@ First carry out the same need manually until it works, then tidy the repeated pr
 
 **Short answer: First determine whether what you lack is “a method for doing something”, or an external tool interface that needs to be called reliably.**
 
-Fixed processes, inspection standards, and reference material should be written as Skills; for work that existing CLIs can already complete clearly, first let Pi read the help and call that CLI. Pi Core does not include MCP by default at present; only when you really need to expose external capabilities in a structured way and are willing to bear the cost of tool descriptions, authentication, and maintenance should you connect MCP through an Extension or Package.
+Fixed processes, inspection standards, and reference material should be written as Skills; for work that existing CLIs can already complete clearly, first let Pi read the help and call that CLI. Since 0.99.0, Pi supports MCP in the form of a built-in Extension, so servers can be added with `pi mcp add`, and Codemode is here as well: the model writes JavaScript scripts to call tools (according to the [official changelog](/en/releases/#release-v0-99-0), verified on 2026-10-01). Even so, connect an MCP server only when you really need to expose external capabilities in a structured way and are willing to bear the cost of tool descriptions, authentication, and maintenance.
 
-**Further reading:** [Skill](/en/reference/glossary#skill) · [Tool / Tool Call](/en/reference/glossary#tool-tool-call) · [Skills, Extensions, and Packages](/en/guide/skills-extensions-packages)
+**Further reading:** [Skill](/en/reference/glossary#skill) · [Tool / Tool Call](/en/reference/glossary#tool-tool-call) · [Skills, Extensions, and Packages](/en/guide/skills-extensions-packages) · [“You Said No MCP!”](/en/translations/you-said-no-mcp)
 
 ## Are more Extensions always better? {#more-extensions-better}
 

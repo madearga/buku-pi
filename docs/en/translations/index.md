@@ -1,6 +1,6 @@
 ---
 title: Earendil's Officially Licensed Translations
-description: The complete English edition of eleven Earendil articles on Pi, Agent Harness, code quality, and the company's vision, published under an official Earendil license.
+description: The complete English edition of fourteen Earendil articles on Pi, Agent Harness, MCP, code quality, and the company's vision, published under an official Earendil license.
 prev:
   text: Reference Guide
   link: /en/reference/
@@ -13,7 +13,7 @@ next:
 
 # Earendil's Officially Licensed Translations
 
-Here you will find the complete English edition of eleven Earendil articles on Pi, Agent Harness, session mechanics, code quality, and the company's vision. All eleven translations are officially licensed by Earendil and rendered in full, faithful to the original text.
+Here you will find the complete English edition of fourteen Earendil articles on Pi, Agent Harness, session mechanics, MCP, code quality, and the company's vision. All fourteen translations are officially licensed by Earendil and rendered in full, faithful to the original text.
 
 Every page keeps the original title, author, publication date, and a link to the original text, and also includes:
 
@@ -23,7 +23,7 @@ The English edition and its adaptations are published under [CC BY 4.0](https://
 
 ## Recommended reading order
 
-The first six articles are closest to the Pi learning path: first understand sessions, context compaction, and the cache, then get to know the Harness, and understand Pi from two angles — that of a non-engineer and a performance case study. Articles seven through ten record the background of Pi joining Earendil, along with Earendil's long-term vision for software that is trustworthy and personal. The eleventh article examines how the quality of AI code is judged.
+The first six articles are closest to the Pi learning path: first understand sessions, context compaction, and the cache, then get to know the Harness, and understand Pi from two angles — that of a non-engineer and a performance case study. Articles seven through ten record the background of Pi joining Earendil, along with Earendil's long-term vision for software that is trustworthy and personal. The eleventh article examines how the quality of AI code is judged. The twelfth explains why Pi changed its position and supports MCP, and how Codemode lets a model call tools through scripts. The thirteenth and fourteenth introduce Pi 1.0 and the experimental Pi Durable.
 
 | What you want to understand now | Read this first | When you are done, come back to |
 | --- | --- | --- |
@@ -31,8 +31,10 @@ The first six articles are closest to the Pi learning path: first understand ses
 | Why long conversations lose detail | Three articles: session portability, compaction, and prompt cache | [Module three](/en/guide/context-and-compaction), [Compaction experiment](/en/cases/compaction-before-after) |
 | If an Agent can already run, is the code good enough | “Measuring code sloppiness” “Pi: minimal yet efficient” | [Code repair](/en/cases/code-repair), [Capstone project](/en/cases/graduation-project) |
 | You want to know the background of the author and the company | Announcement, reflection, the high ground, an invitation to correspond | Optional reading, not a prerequisite for installation |
+| Whether Pi can use MCP now | “You Said No MCP!” | [How to choose between a Skill and MCP](/en/reference/faq#skill-vs-mcp), [release archive](/en/releases/) |
+| What the difference is between Pi 1.0 and Durable | “Pi 1.0”, “Pi Durable” | [Release highlights](/en/releases/pi-1-0), [the special Durable section](/en/guide/pi-durable) |
 
-If you want to read the four themes — sessions, compaction, cache, and the Harness — as a connected series, you can continue with [connected reading: Why Pi Keeps Sessions and Context in Your Hands](/en/journey/why-pi-keeps-context-editable). This is a personal analysis and is not part of the eleven licensed translations below.
+If you want to read the four themes — sessions, compaction, cache, and the Harness — as a connected series, you can continue with [connected reading: Why Pi Keeps Sessions and Context in Your Hands](/en/journey/why-pi-keeps-context-editable). This is a personal analysis and is not part of the fourteen licensed translations below.
 
 ### 01 The Session You Cannot Take With You
 
@@ -144,6 +146,38 @@ Starting from metrics such as line count, verbosity, and erosion, it discusses w
 
 [Read the licensed translation](/en/translations/measuring-code-sloppiness) · [View the original English text](https://earendil.com/posts/measuring-code-sloppiness/)
 
+### 12 “You Said No MCP!”
+
+**Original title**　*“You Said No MCP!”*
+
+**Publication date**　2026-09-29
+
+Pi once said plainly that it did not include MCP, and now it has changed to support it. This article explains why the team changed its mind, what changed both in MCP and in Pi, and what Codemode is—the thing that lets a model write scripts to call tools.
+
+[Read the licensed translation](/en/translations/you-said-no-mcp) · [View the original English text](https://earendil.com/posts/you-said-no-mcp/)
+
+
+
+### 13 Pi 1.0
+
+**Original title**　*Pi 1.0*
+
+**Publication date**　2026-10-01
+
+It introduces the design tradeoffs behind the official Pi release, Codemode, virtual models, deferred tool loading, and full-screen by default, and explains where Pi Durable stands on its own.
+
+[Read the licensed translation](/en/translations/pi-1-0) · [View the original English text](https://earendil.com/posts/pi-1-0/) · [1.0.0 release highlights](/en/releases/pi-1-0)
+
+### 14 Pi Durable
+
+**Original title**　*Pi Durable*
+
+**Publication date**　2026-10-01
+
+It introduces the experimental framework for long-running Agent applications, complete with code and demos for crash recovery, concurrent conversations, Extensions, tasks, compaction, application state, and collaboration among many people.
+
+[Read the licensed translation](/en/translations/pi-durable) · [View the original English text](https://earendil.com/posts/pi-durable/) · [The beginner primer](/en/guide/pi-durable)
+
 ::: info A note on translations and licensing
-Copyright in all eleven original English texts belongs to Earendil. The English edition and its adaptations are published under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) with a license from Earendil. These translations try to remain faithful to the structure, views, examples, images, and links of the original texts; where anything is ambiguous, the corresponding original English text prevails. Companion images from the original texts are used under each article's license, and credits to photographers, graphic designers, or project sources are retained in the translation.
+Copyright in all fourteen original English texts belongs to Earendil. The English edition and its adaptations are published under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) with a license from Earendil. These translations try to remain faithful to the structure, views, examples, images, and links of the original texts; where anything is ambiguous, the corresponding original English text prevails. Companion images from the original texts are used under each article's license, and credits to photographers, graphic designers, or project sources are retained in the translation.
 :::
