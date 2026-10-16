@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "node scripts/buat-webmcp.mjs && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "check:content": "node scripts/check-content.mjs",
     "check:releases": "node scripts/check-pi-releases.mjs",

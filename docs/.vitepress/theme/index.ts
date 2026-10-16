@@ -259,6 +259,14 @@ export default {
       defineAsyncComponent(() => import('./components/PiCodemodeReplay.vue'))
     )
     if (typeof window === 'undefined') return
+    // WebMCP: daftarkan kemampuan Buku Pi untuk agen. Dimuat malas setelah halaman siap,
+    // supaya pengunjung biasa tidak menanggung bebannya. Berkas: ./webmcp.ts
+    const pasangWebMcp = () =>
+      import('./webmcp')
+        .then((m) => m.pasangWebMcp())
+        .catch(() => {})
+    if (document.readyState === 'complete') window.setTimeout(pasangWebMcp, 1200)
+    else window.addEventListener('load', () => window.setTimeout(pasangWebMcp, 1200), { once: true })
     // VitePress also decodes the fragment while rendering language links.
     // Drop an invalid incoming fragment before those components render.
     const normalizeHash = () => {
