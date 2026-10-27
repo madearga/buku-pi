@@ -13,7 +13,7 @@ next:
 
 # Pi Durable: keeping an Agent working after an interruption
 
-Imagine an Agent arranging a trip: the weather is checked, the museums are checked, the train timetable is still being looked up—and then the process exits. Once it is opened again, can it keep the first two results and resume only the remaining work?
+Imagine an Agent arranging a trip: the weather is checked, the museums are checked, the train timetable is still being looked up, and then the process exits. Once it is opened again, can it keep the first two results and resume only the remaining work?
 
 On 1 October 2026, Earendil released Pi Durable alongside Pi 1.0, and that is the kind of problem it sets out to solve. **It is an experimental framework for developers building long-running Agent applications.** The Pi coding assistant you use in the terminal continues to exist; upgrading Pi does not automatically turn existing sessions into Durable applications.
 
@@ -39,7 +39,7 @@ Durable handles the recovery logic inside the task itself. Bringing a stopped se
 
 <strong>A conversation</strong> holds the record of the interaction between the person and the Agent, together with the model, tools, and instructions that conversation uses. An application can run several conversations at once, or fork from an existing history.
 
-<strong>A task</strong> is a unit of work in progress. One model request, one tool call, one compaction—each can be a task. A task saves a checkpoint as it moves forward, so a new process knows what is done and what is still waiting.
+<strong>A task</strong> is a unit of work in progress. One model request, one tool call, one compaction: each can be a task. A task saves a checkpoint as it moves forward, so a new process knows what is done and what is still waiting.
 
 <strong>Storage</strong> carries all of that state. The framework provides in-memory, SQLite, and JSONL backends. To recover across processes you need SQLite, JSONL, or another persistent backend that is kept; an in-memory backend disappears with its process. At any one time a single storage is held by a single process, and several clients connect to that process.
 
@@ -64,7 +64,7 @@ Long conversations have a boundary too: older messages may stay in storage, but 
 
 ## Look at the trip-planner demo first
 
-[The original recording in the full translation](/en/translations/pi-durable#try-it) shows a trip-planning Agent. The main Agent hands the research to a subagent, and the subagent runs three searches—weather, museums, and trains—at the same time; meanwhile the main Agent can still chat with the user.
+[The original recording in the full translation](/en/translations/pi-durable#try-it) shows a trip-planning Agent. The main Agent hands the research to a subagent, and the subagent runs three searches (weather, museums, and trains) at the same time; meanwhile the main Agent can still chat with the user.
 
 In the official example the three searches wait about 6 seconds, 10 seconds, and 30 seconds respectively, then return prepared data. **What it demonstrates is parallel tasks and their recovery, not live weather or ticketing lookups.** Model calls still need available model credentials and may incur usage costs.
 

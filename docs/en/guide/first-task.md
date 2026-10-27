@@ -104,7 +104,7 @@ After sending, first look at the read-write log the interface shows; do not just
 2. The object written must be `output/daftar-tindakan.md`.
 3. If another directory appears, or Pi is about to write into `input`, press `Esc` to stop the current task.
 
-![Illustration: Si Hitam drops a rolled-up paper into a letter slot on a box lined with cursor marks, labelled kirim tugas and Pi.](/en/images/first-task-submit.webp)
+![Illustration: Si Hitam drops a rolled-up paper into a letter slot on a box lined with cursor marks, labelled submit task and Pi.](/en/images/first-task-submit.webp)
 
 This is a demonstration using fictional meeting material. The package update and the model name are not prerequisites for this exercise. The example path is an old demo directory; your working path must be `.../pi-practice`, and it does not need to match the demo text.
 

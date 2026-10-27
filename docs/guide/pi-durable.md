@@ -64,7 +64,7 @@ Percakapan panjang juga punya batas: pesan lama boleh tetap tersimpan, tetapi pe
 
 ## Lihat dulu demo perencana perjalanan
 
-[Rekaman asli pada terjemahan lengkap](/translations/pi-durable#coba-sendiri) menampilkan sebuah Agent perencana perjalanan. Agent utama menyerahkan riset kepada sub-Agent, dan sub-Agent menjalankan tiga pencarian—cuaca, museum, dan kereta—secara bersamaan; sementara itu, Agent utama tetap dapat mengobrol dengan pengguna.
+[Rekaman asli pada terjemahan lengkap](/translations/pi-durable#coba-sendiri) menampilkan sebuah Agent perencana perjalanan. Agent utama menyerahkan riset kepada sub-Agent, dan sub-Agent menjalankan tiga pencarian (cuaca, museum, dan kereta) secara bersamaan; sementara itu, Agent utama tetap dapat mengobrol dengan pengguna.
 
 Pada contoh resminya, ketiga pencarian masing-masing menunggu sekitar 6 detik, 10 detik, dan 30 detik, lalu mengembalikan data yang sudah disiapkan. **Yang didemonstrasikan adalah tugas paralel dan pemulihannya, bukan kueri cuaca atau tiket secara waktu nyata.** Pemanggilan model tetap memerlukan kredensial model yang tersedia, dan dapat menimbulkan biaya pemakaian.
 

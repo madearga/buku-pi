@@ -13,7 +13,7 @@ next:
 
 # Skill, Extension, dan Pi Package
 
-Saat baru mulai memperluas Pi, ketiga nama ini mudah tertukar. Masing-masing menyelesaikan tiga hal yang berbeda — metode kerja, kemampuan yang dapat dijalankan, dan distribusi sumber daya — dan tidak ada hubungan tingkat dari rendah ke tinggi di antaranya.
+Saat baru mulai memperluas Pi, ketiga nama ini mudah tertukar. Masing-masing menyelesaikan hal yang berbeda: metode kerja, kemampuan yang dapat dijalankan, dan distribusi sumber daya. Tidak ada hubungan tingkat dari rendah ke tinggi di antara ketiganya.
 
 | Nama | Dapat dipahami sebagai | Cocok untuk menyelesaikan | Kapan pemula memakainya |
 | --- | --- | --- | --- |
