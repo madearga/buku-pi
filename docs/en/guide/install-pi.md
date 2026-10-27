@@ -32,6 +32,8 @@ Official Pi currently offers two installation routes for macOS and Linux. Both i
 | Official installer | Beginners who want the official script to handle environment checks, installation, and PATH | `curl -fsSL https://pi.dev/install.sh \| sh` | Run the installer again and choose uninstall |
 | Global npm install | Readers who already manage Node.js/npm and want to use the package manager explicitly | `npm install -g --ignore-scripts @earendil-works/pi-coding-agent` | Uninstall globally through npm |
 
+The official installer in Pi 1.1.0 pins all dependencies; since 1.0.1, the npm published package no longer pins its indirect dependencies. After a successful update on the npm route, you may see a suggestion to migrate to the official installer; how to handle it is covered in [Lifecycle management after installation](/en/guide/lifecycle-management).
+
 This book recommends the **official installer** for a first installation. The installer checks for Node.js 22.19.0 or newer and for npm; if the environment is incomplete, it first asks whether you want help installing them. The previous lesson already had you complete that check early, so under normal conditions the installer goes straight into installing Pi.
 
 With your mouse, select **a full line** below and press `Command + C`; click back on the blinking cursor in the terminal, press `Command + V`, make sure the domain is `pi.dev` and there is no extra text, then press Enter.
@@ -66,7 +68,7 @@ After installation finishes, check whether Pi really works.
 pi --version
 ```
 
-What you type here is `pi --version`, and the series of version numbers that appears afterward is the output. If a version number appears and the cursor returns, rather than `command not found`, it passed. This book does not make a particular Pi version a permanent requirement; both installation routes were verified on 2026-09-23, and from here on refer to the [official Pi Quickstart](https://pi.dev/docs/latest/quickstart).
+What you type here is `pi --version`, and the series of version numbers that appears afterward is the output. If a version number appears and the cursor returns, rather than `command not found`, it passed. This book does not make a particular Pi version a permanent requirement. The official installer route keeps its verification record from 2026-09-23; on 2026-10-12, pinned Pi 1.1.0 was installed in an isolated npm prefix, and the version output, startup, `/quit`, and a second launch were all confirmed. The official installer itself was not run again, so from here on refer to the [official Pi Quickstart](https://pi.dev/docs/latest/quickstart).
 
 ![Illustration: Si Hitam inspects three wooden crates with a magnifying glass, one labelled for each of node --version, npm --version, and pi --version.](/en/images/01-pi-cek-versi.webp)
 
@@ -91,7 +93,7 @@ pi
 
 These three lines run in order. The `pwd` output must end with `/Downloads/pi-practice`; if you used `pi-practice-2` in the previous lesson, the directory name in this command must also be replaced with your own name. Once the path is confirmed, only then type the last line, `pi`.
 
-On first launch, Pi may take a moment to load. When it finishes, you will see an editor area for typing messages, and the status bar at the bottom shows the current directory and the model. You have now entered Pi's interactive interface from an ordinary terminal; do not type the status bar text inside the Pi interface as a terminal command.
+On first launch, Pi may take a moment to load. Pi 1.1.0 uses the fullscreen interface by default. When it finishes, you will see an editor area for typing messages, and the status bar at the bottom shows the current directory and the model. You have now entered Pi's interactive interface from an ordinary terminal; do not type the status bar text inside the Pi interface as a terminal command.
 
 If Pi asks you to log in, that does not mean the installation failed. Authentication is handled in the next lesson.
 

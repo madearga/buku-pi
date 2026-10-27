@@ -130,7 +130,7 @@ pi --version
 command -v pi
 ```
 
-Perintah pertama harus menampilkan nomor versi Pi, perintah kedua harus menampilkan lokasi perintah `pi` yang sebenarnya ditemukan Git Bash. Perintah pemasangan diverifikasi pada 2026-09-23; setelahnya ikuti [Quickstart resmi Pi](https://pi.dev/docs/latest/quickstart).
+Perintah pertama harus menampilkan nomor versi Pi, perintah kedua harus menampilkan lokasi perintah `pi` yang sebenarnya ditemukan Git Bash. Jalur npm tidak mematok dependensi tidak langsung; jika saat memperbarui nanti Pi menampilkan saran migrasi, baca dulu [Manajemen siklus hidup setelah instalasi](/guide/lifecycle-management), dan jangan menjalankan dua cara pemasangan secara berurutan di halaman ini. Perintah pemasangan diverifikasi pada 2026-09-23; setelahnya ikuti [Quickstart resmi Pi](https://pi.dev/docs/latest/quickstart).
 
 Jika proses pemasangan memunculkan `npm ERR!`, `EPERM`, atau `Access is denied`:
 
@@ -200,3 +200,5 @@ Sudah selesai memasang dan sekarang perlu meningkatkan atau menguninstal? Lihat 
 - [Halaman unduhan Node.js](https://nodejs.org/en/download)
 
 Perintah pemasangan, persyaratan Node.js, dan tiga jalur eksekusi Windows diverifikasi pada 2026-09-23. Jika Pi, Node.js, atau Git for Windows diperbarui, utamakan memeriksa ulang halaman resmi di atas.
+
+Pada 2026-10-12 hanya dilakukan pengecekan teks terhadap [dokumentasi Windows versi terkunci Pi v1.1.0](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/windows.md) dan kode sumber pembaruannya; tanpa lingkungan Windows, tanggal verifikasi di mesin nyata di atas tidak diperbarui.

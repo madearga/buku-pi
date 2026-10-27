@@ -93,4 +93,4 @@ After an interruption, read the existing progress and output first; do not blind
 
 ## Optional: Pi Durable
 
-If you are going to build an Agent application that resumes tasks after its process is interrupted, continue with [Pi Durable: keeping an Agent working after an interruption](/en/guide/pi-durable). It is an experimental framework, and the progress-file exercise already in this book can still be completed on its own.
+If you are going to build an Agent application that resumes tasks after its process is interrupted, continue with [Pi Durable: keeping an Agent working after an interruption](/en/guide/pi-durable). It is an experimental framework, and the progress-file exercise already in this book can still be completed on its own. If you want to see the framework's automatic archiving take effect right away, continue with [Optional case study: observing crash recovery with Pi Durable Assistant](/en/cases/durable-assistant).

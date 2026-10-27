@@ -146,7 +146,19 @@ If you mainly write code, edit articles, or finish one-off tasks in the terminal
 
 Pi Durable only starts to feel valuable when you are building a bot that stays online, a workflow several users take part in, or an application that has to keep several conversations and background tasks running after a restart. It also supports application state documents, hot-swapping Extensions, and several people subscribing to the same conversation; those capabilities have to be assembled by the developer, and are not a ready-made Slack service or multi-user chat site.
 
-The next step is to read the [full official translation](/en/translations/pi-durable), then compare it with the pinned-version material below. The payment, approval, and deploy snippets in the original text are there to explain the mechanics; their external services are yours to implement, and they are not a complete application you can copy and run.
+If you want to see these mechanics combined into a working application, work through [Optional case study: observing crash recovery with Pi Durable Assistant](/en/cases/durable-assistant), which reproduces crash recovery on your own machine without an API Key. The next step is to read the [full official translation](/en/translations/pi-durable), then compare it with the pinned-version material below. The payment, approval, and deploy snippets in the original text are there to explain the mechanics; their external services are yours to implement, and they are not a complete application you can copy and run.
+
+## Community ecosystem
+
+The developments below were verified on **2026-10-11** from the authors' original posts and project material. None of the third-party projects is an official Earendil product; this book has not run them and does not rate their usability on that basis.
+
+| Development | What it is, and who should keep reading |
+| --- | --- |
+| PiDurableKit | Finn Voorhees's Swift community wrapper that runs Pi Durable inside JavaScriptCore; for developers researching Agent applications on Apple platforms, check the system requirements before integrating. |
+| Rivet Actors | Rivet has announced that its Actors support Pi Durable; for server-side developers researching hosted Actors and long-running tasks, check deployment and cost against Rivet's own rules. |
+| Browser and WebView experiments | Marco Jacopo Ferrarotti describes putting the core into the browser and hosting the tool environment in a Kotlin layer; for developers exploring client-side execution, this page only records the author's experiment so far, and no reproducible repository exists yet. |
+| Build-your-own-assistant call | Sawyer Hood is calling for building Muse-, Dots-, or Grok-Bot-like applications with Pi Durable; for people looking for a project idea, it is a call to action, not a finished product. |
+| Durable Codemode | Mario Zechner mentioned possibly giving Codemode persistent execution; as of the verification date it is **not released**, so it suits people following the framework's direction, and it is not a ready-made feature of this section. |
 
 ## Sources and further reading
 
@@ -156,3 +168,10 @@ The next step is to read the [full official translation](/en/translations/pi-dur
 - [Trip-planner source: simulated searches and wait times](https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/experimental/vacation/vacation.ts)
 - [Runtime requirements of the Durable package](https://github.com/earendil-works/pi/blob/v1.0.0/packages/durable/package.json)
 - [Thirty-plus official examples](https://github.com/earendil-works/pi/tree/v1.0.0/packages/durable/test/examples) · [The small coding assistant example](https://github.com/earendil-works/pi/tree/v1.0.0/packages/coding-agent/src/experimental/durable)
+- [Pi Durable Assistant: the author's personal Agent built on Pi Durable (unofficial)](https://github.com/xiaomoBoy/pi-durable-assistant): combines checkpoint recovery, background subagents, scheduled plans, and a web interface; read it alongside the mechanics in this section
+
+- [PiDurableKit repository](https://github.com/finnvoor/PiDurableKit) and [Finn Voorhees's original post](https://x.com/finnvoorhees/status/2108192018824339709)
+- [Nathan Flurry: Rivet Actors and Pi Durable](https://x.com/NathanFlurry/status/2107888557151137830) and [the official Rivet announcement](https://x.com/rivet_dev/status/2107840906141335935)
+- [Marco Jacopo Ferrarotti: the browser and WebView experiment](https://x.com/mjf891/status/2108177206962790452)
+- [Sawyer Hood: the build-your-own-assistant call](https://x.com/sawyerhood/status/2107872386339287239)
+- [Mario Zechner: the Durable Codemode idea](https://x.com/badlogicgames/status/2108192220385820698)

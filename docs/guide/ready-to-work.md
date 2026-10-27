@@ -45,6 +45,8 @@ Ketik `/model` dan pastikan sudah ada model yang dipilih. Jika perlu mengubahnya
 
 Ketik `/settings` untuk membuka pengaturan yang umum dipakai. Pada tahap ini, biarkan nilai default saja sudah cukup. Tema, pemadatan konteks, dan opsi lain akan dibahas saat Anda benar-benar menghadapi kebutuhannya.
 
+Pi 1.1.0 menampilkan layar penuh sebagai bawaan; `Home`/`End` menggerakkan kursor area input, dan untuk berpindah ke awal atau akhir riwayat pada layar penuh gunakan `Ctrl+Home`/`Ctrl+End`. Jika saat mulai Anda hanya melihat versi dan petunjuk tombol, kemungkinan `quietStartup: "header"` sudah diatur; pengaturan itu menyembunyikan cakupan model dan daftar sumber daya, dan bukan berarti pemuatan sumber daya gagal. Untuk memeriksa sumber daya yang dimuat, jalankan Pi dengan `pi --verbose`.
+
 Jika tanpa sengaja membuka halaman pengaturan yang tidak dikenal, tekan `Esc` untuk kembali. Jangan mengikuti tangkapan layar orang lain dan mengubah banyak opsi pada pelajaran ini; tampilan bisa berbeda antar versi dan terminal.
 
 ## 3. Pahami kepercayaan proyek dengan benar
@@ -95,3 +97,5 @@ Jika Anda perlu memahami cara memutakhirkan, mengganti akun, atau menghapus, lih
 - [Penjelasan penggunaan Pi](https://pi.dev/docs/latest/usage)
 - [Penjelasan pengaturan Pi](https://pi.dev/docs/latest/settings)
 - [Penjelasan keamanan Pi](https://pi.dev/docs/latest/security)
+
+Pada 2026-10-12, peluncuran layar penuh Pi 1.1.0, `/model`, `/settings`, kembali dengan `Esc`, `/quit`, peluncuran ulang, dan tes konektivitas tanpa tool diuji nyata di direktori latihan terpisah; di konfigurasi terpisah lain juga dikonfirmasi bahwa `Home`/`End` dapat menyunting awal dan akhir input, `quietStartup: true` menyembunyikan versi, dan `"header"` mempertahankan versi. Pencatatan pintasan awal-akhir riwayat dan batas kepercayaan proyek hanya diperiksa silang terhadap [penjelasan tombol versi terkunci](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/keybindings.md) dan [penjelasan keamanan versi terkunci](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/security.md), tanpa mengulang seluruh tes skenario kepercayaan.

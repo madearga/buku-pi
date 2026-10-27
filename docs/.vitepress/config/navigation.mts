@@ -69,6 +69,13 @@ export const nav = [
               { text: 'Catatan belajar', link: '/journey/' },
               { text: 'Arsip 98 tweet', link: '/tweets/' }
             ]
+          },
+          {
+            text: 'Proyek penulis',
+            items: [
+              { text: 'Pi Durable Assistant', link: 'https://github.com/xiaomoBoy/pi-durable-assistant' },
+              { text: 'Semua proyek open source penulis', link: 'https://github.com/xiaomoBoy' }
+            ]
           }
         ]
       },
@@ -192,6 +199,11 @@ export const sidebar = {
           ]
         },
         {
+          text: 'Studi kasus pilihan',
+          collapsed: true,
+          items: [{ text: 'Pemulihan dari crash dengan Pi Durable', link: '/cases/durable-assistant' }]
+        },
+        {
           text: 'Saat menghadapi masalah',
           collapsed: true,
           items: [{ text: 'Panduan penanganan masalah Pi', link: '/reference/troubleshooting' }]
@@ -278,6 +290,7 @@ export const sidebar = {
           collapsed: false,
           items: [
             { text: 'Semua pembaruan versi', link: '/releases/' },
+            { text: 'Poin penting Pi 1.1.0', link: '/releases/pi-1-1' },
             { text: 'Poin penting Pi 1.0.0', link: '/releases/pi-1-0' },
             { text: 'Pengantar Pi Durable', link: '/guide/pi-durable' },
             { text: 'Memperbarui Pi dengan aman', link: '/guide/lifecycle-management' },

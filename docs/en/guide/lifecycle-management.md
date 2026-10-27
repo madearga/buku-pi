@@ -79,6 +79,13 @@ pi update
 
 According to the current official documentation, `pi update` by default updates only Pi itself, the same purpose as `pi update --self`. This command does not automatically upgrade all installed Packages.
 
+As of Pi 1.1.0, an update can also end in two different results you need to tell apart:
+
+- A global npm install that updates successfully will then suggest migrating to the official installer, because the npm route does not pin indirect dependencies; the suggestion itself is not an update failure.
+- An installation managed by the official installer keeps only the new version and the version from before this update. That does not replace a project backup, and it does not apply to npm or other installation methods.
+
+If you are upgrading from 1.0.2 or earlier and using Azure, the provider name has changed from `azure-openai-responses` to `azure`. You need to run `/login` again and check the old name in your custom models and settings; the configuration fields and the effect on old session caches are covered in [Pi 1.1.0 release highlights](/en/releases/pi-1-1). There is nothing to do if you do not use Azure.
+
 After the command finishes and the input line reappears in the normal terminal, check:
 
 ```bash
@@ -103,7 +110,7 @@ Reply with just “Connection is normal after the update”. Do not read, create
 If you receive the exact reply, it means authentication and model calls are working right now. If the test fails, first save the full error and the version numbers before and after the update; do not immediately reinstall, clear settings, and switch Provider; check one variable at a time.
 
 ::: warning `--force` is not an everyday update button
-`pi update --self --force` will still try to reinstall when you are already on the latest version. It suits clear repair scenarios, not a mandatory part of a regular update. Pi also explains that the experimental installer management mode does not support `--force`; such an installation has to be repaired by running the matching installer again.
+`pi update --self --force` will still try to reinstall when you are already on the latest version. It suits clear repair scenarios, not a mandatory part of a regular update. Pi also explains that the installer management mode does not support `--force`; such an installation has to be repaired by running the matching installer again.
 :::
 
 ## 3. Distinguish Pi updates, the model catalog, and Packages
@@ -233,4 +240,4 @@ Check each item according to the actions you actually took; you do not have to a
 - [Pi Sessions: where sessions are stored](https://pi.dev/docs/latest/sessions)
 - [Pi Settings: settings and update checks](https://pi.dev/docs/latest/settings)
 
-The installer, the npm uninstall method, and the storage locations on this page were verified on 2026-09-23. When you use them, still rely on the latest official documentation and `pi --help` on your computer.
+The official installer, logout, and storage locations keep their verification record from 2026-09-23. On 2026-10-12, in an isolated npm prefix, I actually ran `pi list`, an update from 1.0.0 to 1.1.0, the 1.1.0 npm migration suggestion, `pi update --models`, and the npm uninstall; the test copy has been removed, the independent configuration directory remains, and the system's original installation was untouched. The old-version cleanup of managed installations and the Azure rename were only checked against the [pinned changelog](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/CHANGELOG.md), without actually testing a managed update or an Azure account. When you use them, rely on the matching official documentation and `pi --help` on your computer.

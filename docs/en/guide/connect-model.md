@@ -87,7 +87,7 @@ This `/login` command is typed in the **edit area at the bottom of Pi**, not aft
 
 ![Illustration: Si Hitam stands in front of four doors holding a key, choosing one; the doors are labelled cara login, API resmi, and langganan.](/en/images/02-pi-cara-login.webp)
 
-This is only the selection entry point, so nothing is sent yet. You can move between the account-login and API Key routes; confirm the one you want before selecting it. Real keys, verification codes, and any account information must never be visible to others.
+The screenshot was taken on Pi 0.80.10 and stops at the selection entry point, without submitting an account or credentials. The fullscreen menu in Pi 1.1.0 also shows a Radius entry; the first two items, account login and API Key, are chosen the same way. The blue arrow marks the currently selected item; you can move between the account-login and API Key routes. Real keys, verification codes, and any account information must never appear in tutorial screenshots.
 
 Follow the interface prompts to choose one route, and complete only the one you already confirmed.
 
@@ -151,3 +151,7 @@ If Pi is about to read or write a file or run a command, press `Esc` to stop it.
 - The test replies with exactly "Pi is connected", and with no tool calls.
 
 [Next lesson: get ready to work in the right directory →](/en/guide/ready-to-work)
+
+::: info On-machine recheck · 2026-10-12
+In an independent configuration and the practice directory, I opened the `/login` and `/model` menus with Pi 1.1.0 and, using the DeepSeek credentials already present in this machine's environment, received the “connection is normal” reply, with no tool calls in the event record. No OAuth authorization was redone and no API Key was entered, so the historical verification dates for those flows cannot be updated on this basis; the prices and plan dates above stay unchanged.
+:::

@@ -130,7 +130,7 @@ pi --version
 command -v pi
 ```
 
-The first command must show the Pi version number; the second must show the actual location of the `pi` command that Git Bash found. The installation command was verified on 2026-09-23; after that, follow the [official Pi Quickstart](https://pi.dev/docs/latest/quickstart).
+The first command must show the Pi version number; the second must show the actual location of the `pi` command that Git Bash found. The npm route does not pin indirect dependencies; when you update later and Pi shows the migration suggestion, read [Lifecycle management after installation](/en/guide/lifecycle-management) first, and do not run both installation methods one after the other on this page. The installation command was verified on 2026-09-23; after that, follow the [official Pi Quickstart](https://pi.dev/docs/latest/quickstart).
 
 If the installation process shows `npm ERR!`, `EPERM`, or `Access is denied`:
 
@@ -200,3 +200,5 @@ Finished installing and now need to upgrade or uninstall? See [Lifecycle managem
 - [Node.js download page](https://nodejs.org/en/download)
 
 The installation commands, Node.js requirements, and three Windows execution paths were verified on 2026-09-23. If Pi, Node.js, or Git for Windows are updated, check the official pages above first.
+
+On 2026-10-12, only a text-level review was done against the [pinned Pi v1.1.0 Windows documentation](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/windows.md) and the updated source; there is no Windows machine here, so the on-machine verification dates above were not updated.

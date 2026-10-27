@@ -146,7 +146,19 @@ Jika Anda terutama menulis kode, menyunting artikel, atau menyelesaikan tugas se
 
 Pi Durable baru mulai terasa berguna ketika Anda hendak membangun bot yang aktif terus-menerus, alur kerja yang diikuti banyak pengguna, atau aplikasi yang perlu melanjutkan beberapa percakapan dan tugas latar belakang setelah restart. Ia juga mendukung dokumen status aplikasi, penggantian Ekstensi secara panas, dan langganan banyak orang pada percakapan yang sama; kemampuan itu perlu dirangkai sendiri oleh pengembang, dan bukan layanan Slack atau situs obrolan banyak pengguna yang siap pakai.
 
-Langkah berikutnya adalah membaca [terjemahan lengkap resminya](/translations/pi-durable), lalu membandingkannya dengan bahan versi terkunci berikut. Potongan kode pembayaran, persetujuan, dan deploy pada teks asli dipakai untuk menjelaskan mekanismenya; layanan eksternalnya perlu Anda implementasikan sendiri, dan bukan aplikasi lengkap yang bisa langsung disalin dan dijalankan.
+Jika ingin melihat mekanisme-mekanisme ini dirangkai menjadi satu aplikasi yang bisa dipakai, kerjakan [studi kasus pilihan: Mengamati pemulihan checkpoint dengan Pi Durable Assistant](/cases/durable-assistant); tanpa mengisi API Key, Anda dapat mereproduksi pemulihan crash di komputer sendiri. Langkah berikutnya adalah membaca [terjemahan lengkap resminya](/translations/pi-durable), lalu membandingkannya dengan bahan versi terkunci berikut. Potongan kode pembayaran, persetujuan, dan deploy pada teks asli dipakai untuk menjelaskan mekanismenya; layanan eksternalnya perlu Anda implementasikan sendiri, dan bukan aplikasi lengkap yang bisa langsung disalin dan dijalankan.
+
+## Ekosistem komunitas
+
+Pergerakan berikut diverifikasi pada **2026-10-11** berdasarkan unggahan asli penulisnya dan materi proyek. Semua proyek pihak ketiga bukan produk resmi Earendil; Buku Pi tidak menjalankannya secara nyata dan tidak menilai kebergunaannya berdasarkan data ini.
+
+| Pergerakan | Apa itu, dan siapa yang layak melanjutkan penelusurannya |
+| --- | --- |
+| PiDurableKit | Pembungkus komunitas Swift karya Finn Voorhees yang menjalankan Pi Durable di dalam JavaScriptCore; cocok bagi pengembang yang meneliti aplikasi Agent di platform Apple, dan periksa dulu persyaratan sistemnya sebelum mengintegrasikan. |
+| Rivet Actors | Rivet mengumumkan Actors-nya sudah mendukung Pi Durable; cocok bagi pengembang sisi server yang meneliti Actor terkelola dan tugas berjangka panjang, dengan deploy dan biaya diperiksa menurut aturan Rivet sendiri. |
+| Eksperimen browser dan WebView | Marco Jacopo Ferrarotti menceritakan sendiri memasukkan inti Pi ke dalam browser dan menghosting lingkungan tool lewat lapisan Kotlin; cocok bagi pengembang yang mengeksplorasi eksekusi di sisi klien. Bagian ini untuk saat ini hanya mencatat eksperimen penulisnya, tanpa repositori yang dapat direproduksi. |
+| Ajakan membangun asisten sendiri | Sawyer Hood mengajak orang membangun aplikasi semacam Muse, Dots, atau Grok Bot dengan Pi Durable; cocok bagi yang sedang mencari topik. Ini ajakan, bukan produk yang sudah selesai. |
+| Durable Codemode | Mario Zechner menyebut kemungkinan memberi Codemode kemampuan eksekusi persisten; per tanggal verifikasi **belum dirilis**, cocok diikuti bagi yang memperhatikan arah kerangka kerjanya, dan bukan fitur siap pakai pada pelajaran ini. |
 
 ## Sumber dan bacaan lanjutan
 
@@ -156,3 +168,10 @@ Langkah berikutnya adalah membaca [terjemahan lengkap resminya](/translations/pi
 - [Kode sumber perencana perjalanan: pencarian tiruan dan waktu tunggu](https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/experimental/vacation/vacation.ts)
 - [Persyaratan lingkungan paket Durable](https://github.com/earendil-works/pi/blob/v1.0.0/packages/durable/package.json)
 - [Lebih dari tiga puluh contoh resmi](https://github.com/earendil-works/pi/tree/v1.0.0/packages/durable/test/examples) · [Contoh asisten pemrograman kecil](https://github.com/earendil-works/pi/tree/v1.0.0/packages/coding-agent/src/experimental/durable)
+- [Pi Durable Assistant: personal Agent berbasis Pi Durable buatan penulis (tidak resmi)](https://github.com/xiaomoBoy/pi-durable-assistant): merangkai pemulihan checkpoint, Subagent latar belakang, rencana terjadwal, dan antarmuka web; cocok dibaca berdampingan dengan mekanisme pelajaran ini
+
+- [Repositori PiDurableKit](https://github.com/finnvoor/PiDurableKit) dan [unggahan asli Finn Voorhees](https://x.com/finnvoorhees/status/2108192018824339709)
+- [Nathan Flurry: Rivet Actors dan Pi Durable](https://x.com/NathanFlurry/status/2107888557151137830) dan [pengumuman resmi Rivet](https://x.com/rivet_dev/status/2107840906141335935)
+- [Marco Jacopo Ferrarotti: eksperimen browser dan WebView](https://x.com/mjf891/status/2108177206962790452)
+- [Sawyer Hood: ajakan membangun asisten sendiri](https://x.com/sawyerhood/status/2107872386339287239)
+- [Mario Zechner: gagasan Durable Codemode](https://x.com/badlogicgames/status/2108192220385820698)

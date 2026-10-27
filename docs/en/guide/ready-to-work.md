@@ -45,6 +45,8 @@ Type `/model` and make sure a model is already selected. If you need to change i
 
 Type `/settings` to open commonly used settings. At this stage, leaving the defaults is enough. Themes, context compaction, and other options will be covered when you actually face the need for them.
 
+Pi 1.1.0 uses fullscreen by default; `Home` and `End` move the cursor in the input box, and jumping to the start or end of the fullscreen transcript now uses `Ctrl+Home` and `Ctrl+End`. If at startup you only see the version and key hints, you may have set `quietStartup: "header"`; it hides the model scope and the resource list, which does not mean resources failed to load. To check resources, start Pi with `pi --verbose`.
+
 If you accidentally open an unfamiliar settings page, press `Esc` to go back. Do not follow someone else's screenshots and change many options in this lesson; the display can differ between versions and terminals.
 
 ## 3. Understand Project Trust correctly
@@ -95,3 +97,5 @@ If you need to understand how to update, switch accounts, or uninstall, see [Lif
 - [Pi usage documentation](https://pi.dev/docs/latest/usage)
 - [Pi settings documentation](https://pi.dev/docs/latest/settings)
 - [Pi security documentation](https://pi.dev/docs/latest/security)
+
+On 2026-10-12, in an independent practice directory, I actually ran Pi 1.1.0's fullscreen startup, `/model`, `/settings`, returning with `Esc`, `/quit`, a second launch, and the no-tool connectivity test; in an independent configuration I also confirmed that `Home` and `End` edit the start and end of the input, that `quietStartup: true` hides the version, and that `"header"` keeps it. The transcript shortcuts and the Project Trust boundary were only checked against the [pinned keybindings documentation](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/keybindings.md) and the [security documentation](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/security.md); the full set of trust scenarios was not re-tested.

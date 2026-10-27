@@ -23,6 +23,12 @@ Semakin banyak catatan, semakin jelas bahwa pemula tidak hanya membutuhkan dafta
 
 Daripada mendengar Agent berkata tugasnya sudah beres, edisi ini lebih mementingkan apakah hasilnya bisa berjalan, direproduksi, dan diperiksa sendiri. Karena itu setiap halaman berusaha mengikuti alur “Skenario → Konsep → Praktik → Verifikasi”; bila ditemukan penilaian lama yang tidak akurat, halamannya diperbaiki.
 
+## Proyek open source penulis asli
+
+- [Pi Durable Assistant](https://github.com/xiaomoBoy/pi-durable-assistant): personal Agent yang dapat di-host sendiri berbasis Pi Durable; tugasnya terus berjalan setelah proses dijalankan ulang, dengan antarmuka web, Subagent, dan rencana terjadwal. Setelah membaca [pelajaran Pi Durable](/guide/pi-durable), Anda dapat memakainya untuk melihat satu aplikasi lengkap yang sudah dirangkai.
+- [Pi Durable Edge](https://github.com/xiaomoBoy/pi-durable-edge): versi Cloudflare dari Agent di atas, tanpa perlu menyiapkan server sendiri; saat ini masih versi eksperimental.
+- Proyek lain seperti tool Claude Code untuk keperluan menulis dan demonstrasi, lihat [halaman utama GitHub penulis asli](https://github.com/xiaomoBoy).
+
 ## Sumber & Pelaporan
 
 Buku ini dikembangkan secara terbuka. Kode, riwayat perubahan, dan tempat pelaporan masalah tersedia di

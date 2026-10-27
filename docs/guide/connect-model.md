@@ -87,7 +87,7 @@ Perintah `/login` ini diketik di **area edit di bagian bawah Pi**, bukan setelah
 
 ![Ilustrasi: Si Hitam berdiri di depan empat pintu sambil memegang kunci dan memilih satu, dengan label cara login, API resmi, dan langganan](/images/02-pi-cara-login.webp)
 
-Tahap ini baru pintu masuk pemilihan; tidak ada akun atau kredensial yang dikirim. Anda bisa berpindah antara jalur login akun dan API Key. Key asli, kode verifikasi, dan informasi akun apa pun tidak boleh dipublikasikan atau dibagikan ke mana pun.
+Tahap ini baru pintu masuk pemilihan; tidak ada akun atau kredensial yang dikirim. Gambar pengajaran di halaman ini merekam Pi 0.80.10; menu layar penuh pada Pi 1.1.0 juga menampilkan pintu masuk Radius, dan cara memilih item akun serta API Key pada dua baris pertamanya sama. Anda bisa berpindah antara jalur login akun dan API Key. Key asli, kode verifikasi, dan informasi akun apa pun tidak boleh dipublikasikan atau dibagikan ke mana pun.
 
 Ikuti petunjuk antarmuka untuk memilih satu jalur, dan selesaikan hanya yang tadi sudah Anda pastikan.
 
@@ -151,3 +151,7 @@ Jika Pi hendak membaca atau menulis file atau menjalankan perintah, tekan `Esc` 
 - Pengujian membalas dengan tepat "Pi tersambung", dan tanpa pemanggilan tool.
 
 [Pelajaran berikutnya, bersiap bekerja di direktori yang benar →](/guide/ready-to-work)
+
+::: info Pemeriksaan ulang di mesin nyata · 2026-10-12
+Pada konfigurasi terpisah dan direktori latihan, menu `/login` dan `/model` dibuka dengan Pi 1.1.0, lalu memakai kredensial lingkungan DeepSeek yang sudah ada di komputer, tes koneksinya menerima balasan “koneksi normal” dan catatan event-nya tidak memuat pemanggilan tool. Otorisasi OAuth tidak diulang dan API Key tidak dimasukkan ulang, jadi tanggal verifikasi historis kedua alur itu tidak diperbarui berdasarkan hasil ini; harga dan tanggal paket di atas juga tetap tidak berubah.
+:::

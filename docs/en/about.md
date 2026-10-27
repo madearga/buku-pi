@@ -24,6 +24,12 @@ The more notes accumulated, the clearer it became that beginners need more than 
 
 Rather than hearing an Agent say the task is done, this edition cares more about whether the result runs, can be reproduced, and can be checked independently. That is why every page follows the flow “Scenario → Concept → Practice → Verification”; when an old assessment turns out to be inaccurate, the page is corrected.
 
+## My open source projects
+
+- [Pi Durable Assistant](https://github.com/xiaomoBoy/pi-durable-assistant): a self-hostable personal Agent built on Pi Durable that keeps running tasks after a process restart, with a web interface, subagents, and scheduled plans. After reading [the Pi Durable lesson](/en/guide/pi-durable), you can use it to see a complete, already-assembled application.
+- [Pi Durable Edge](https://github.com/xiaomoBoy/pi-durable-edge): the Cloudflare version of the Agent above; no server to buy, and currently experimental.
+- Other projects, including the Claude Code tools used for writing and demos, are on the [GitHub profile](https://github.com/xiaomoBoy).
+
 ## Source & Reporting
 
 The book is developed in the open. The code, the change history, and the place to report problems are

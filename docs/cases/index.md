@@ -54,3 +54,7 @@ Kedua latihan migrasi ini bersifat opsional dan tidak mengubah penomoran pelajar
 
 - [Dari materi menjadi draf yang dapat diverifikasi](/cases/content-workflow): susun tabel fakta, draf yang menunggu konfirmasi, dan item yang belum diketahui dari dua materi yang bertentangan; cocok untuk penulis konten.
 - [Memperbaiki program kecil](/cases/code-repair): reproduksi dua tes yang gagal terlebih dahulu, perbaiki hanya implementasinya, lalu verifikasi sendiri empat tes dan cakupan perubahannya; cocok untuk pembaca yang ingin mulai menangani kode.
+
+## Studi kasus pilihan
+
+- [Mengamati pemulihan checkpoint dengan Pi Durable Assistant](/cases/durable-assistant): tanpa mengisi API Key, jalankan personal Agent berbasis Pi Durable di komputer Anda, simulasikan crash di tengah tugas panjang, lalu periksa apakah tugasnya berlanjut sampai selesai dan apakah ada eksekusi berulang. Cocok dikerjakan setelah membaca [panduan pengantar Pi Durable](/guide/pi-durable).

@@ -79,6 +79,13 @@ pi update
 
 Menurut penjelasan resmi saat ini, `pi update` secara default hanya memperbarui Pi itu sendiri, sama tujuannya dengan `pi update --self`. Perintah ini tidak otomatis meningkatkan semua Package yang sudah terpasang.
 
+Hingga Pi 1.1.0, saat memperbarui versi Anda juga perlu membedakan dua hasil berikut:
+
+- Pemasangan global npm yang berhasil diperbarui akan disarankan bermigrasi ke installer resmi, karena jalur npm tidak mematok dependensi tidak langsung; saran ini sendiri bukan tanda pembaruan gagal.
+- Pemasangan yang dikelola installer resmi hanya mempertahankan versi baru dan versi sebelum pembaruan ini. Ia tidak menggantikan cadangan proyek, dan tidak berlaku untuk npm atau cara pemasangan lain.
+
+Jika meningkatkan dari 1.0.2 atau lebih lama dan memakai Azure, nama providernya sudah berubah dari `azure-openai-responses` menjadi `azure`. Anda perlu `/login` ulang dan memeriksa nama lama pada model kustom serta pengaturan; dampaknya pada kolom konfigurasi dan cache sesi lama lihat [Poin penting pembaruan Pi 1.1.0](/releases/pi-1-1). Tidak perlu menangani apa pun jika Anda tidak memakai Azure.
+
 Setelah perintah selesai dan baris input muncul kembali di terminal biasa, periksa:
 
 ```bash
@@ -103,7 +110,7 @@ Cukup balas “Koneksi normal setelah pembaruan”. Jangan membaca, membuat, ata
 Jika menerima balasan yang tepat, berarti autentikasi dan pemanggilan model saat ini juga berfungsi. Jika tes gagal, simpan dulu error lengkap serta nomor versi sebelum dan sesudah pembaruan; jangan langsung memasang ulang, mengosongkan pengaturan, dan mengganti Provider; periksa satu variabel dalam satu waktu.
 
 ::: warning `--force` bukan tombol pembaruan harian
-`pi update --self --force` tetap akan mencoba memasang ulang saat sudah versi terbaru. Ini cocok untuk skenario perbaikan yang jelas, bukan langkah wajib pembaruan biasa. Pi juga menjelaskan bahwa mode pengelolaan installer eksperimental tidak mendukung `--force`; pemasangan seperti itu harus diperbaiki dengan menjalankan kembali installer yang sesuai.
+`pi update --self --force` tetap akan mencoba memasang ulang saat sudah versi terbaru. Ini cocok untuk skenario perbaikan yang jelas, bukan langkah wajib pembaruan biasa. Pi juga menjelaskan bahwa mode pengelolaan installer tidak mendukung `--force`; pemasangan seperti itu harus diperbaiki dengan menjalankan kembali installer yang sesuai.
 :::
 
 ## 3. Bedakan pembaruan Pi, katalog model, dan Package
@@ -233,4 +240,4 @@ Periksa satu per satu sesuai tindakan yang benar-benar Anda lakukan; Anda tidak 
 - [Pi Sessions: lokasi penyimpanan sesi](https://pi.dev/docs/latest/sessions)
 - [Pi Settings: pengaturan dan pemeriksaan pembaruan](https://pi.dev/docs/latest/settings)
 
-Installer, cara uninstalasi npm, dan lokasi penyimpanan di halaman ini diverifikasi pada 2026-09-23. Saat digunakan, tetap berpedoman pada dokumentasi resmi terkini dan `pi --help` di komputer Anda.
+Installer resmi, logout, dan lokasi penyimpanan masih mempertahankan catatan verifikasi 2026-09-23. Pada 2026-10-12, `pi list`, pembaruan dari 1.0.0 ke 1.1.0, saran migrasi npm pada 1.1.0, `pi update --models`, dan uninstalasi npm diuji nyata di prefix npm terpisah; salinan ujinya sudah dihapus, direktori konfigurasi terpisahnya masih ada, dan pemasangan bawaan sistem tidak disentuh. Pembersihan versi lama pada pemasangan terkelola dan penggantian nama Azure hanya diperiksa silang terhadap [Changelog versi terkunci](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/CHANGELOG.md), tanpa menguji nyata pembaruan terkelola atau akun Azure. Saat digunakan, tetap berpedoman pada dokumentasi resmi terkait dan `pi --help` di komputer Anda.
