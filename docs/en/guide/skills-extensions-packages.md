@@ -13,7 +13,7 @@ next:
 
 # Skill, Extension, and Pi Package
 
-When you first start extending Pi, these three names are easy to mix up. Each one solves a different problem — a working method, an executable capability, and resource distribution — and there is no hierarchy from low to high among them.
+When you first start extending Pi, these three names are easy to mix up. Each one solves a different problem: a working method, an executable capability, and resource distribution. None of them ranks above another.
 
 | Name | Can be understood as | Good for solving | When a beginner uses it |
 | --- | --- | --- | --- |
