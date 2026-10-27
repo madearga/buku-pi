@@ -93,4 +93,4 @@ Setelah interupsi, baca dulu progres dan output yang ada; jangan menjalankan ula
 
 ## Pilihan: Pi Durable
 
-Jika Anda hendak membangun aplikasi Agent yang dapat melanjutkan tugas setelah prosesnya terputus, lanjutkan ke [Pi Durable: Agent yang terus bekerja setelah interupsi](/guide/pi-durable). Ia adalah kerangka kerja eksperimental, dan latihan file progres yang sudah ada di buku ini tetap dapat diselesaikan sendiri.
+Jika Anda hendak membangun aplikasi Agent yang dapat melanjutkan tugas setelah prosesnya terputus, lanjutkan ke [Pi Durable: Agent yang terus bekerja setelah interupsi](/guide/pi-durable). Ia adalah kerangka kerja eksperimental, dan latihan file progres yang sudah ada di buku ini tetap dapat diselesaikan sendiri. Untuk melihat langsung efek pengarsipan otomatis oleh kerangka kerjanya, lanjutkan dengan [studi kasus pilihan: Mengamati pemulihan checkpoint dengan Pi Durable Assistant](/cases/durable-assistant).

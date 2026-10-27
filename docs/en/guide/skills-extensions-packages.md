@@ -96,6 +96,66 @@ Once you understand it and want the same project to find it automatically, put i
 Pi Packages run with the current user's full system permissions. Besides executable Extensions, Skills and other resources can also direct the Agent to run commands or cause side effects. Do not trust something just because it is called a “package” or a “community resource”. Before installing, check the origin, the resources, and the installation contents of the whole package.
 :::
 
+## Hands-on: bundling your own resources into a Package
+
+When the same Skill and Extension need to move to another computer, you can put them into a directory with a `package.json`. This section assembles the directory and verifies it on one machine only; copying across machines and Git or npm distribution are outside what was actually tested here.
+
+Pi automatically discovers `extensions/`, `skills/`, `prompts/`, and `themes/`; directories you do not need can be left out. Only when resources sit somewhere else do you need to declare their paths in the manifest's `pi` field.
+
+### 1. Assemble and check the materials
+
+In the practice directory in a normal terminal, create another empty directory; if the name already exists, pick a new one and do not overwrite the old exercise. Download the [check Extension](/en/examples/extension/bluebook-check.ts) this book already uses and the <a href="/en/examples/skill/action-list-review/SKILL.md" download>action-list Skill</a>:
+
+```bash
+mkdir bluebook-package-practice
+cd bluebook-package-practice
+mkdir -p bluebook-package/extensions bluebook-package/skills/action-list-review
+curl -fL https://pi.argakuka.com/en/examples/extension/bluebook-check.ts \
+  -o bluebook-package/extensions/bluebook-check.ts
+curl -fL https://pi.argakuka.com/en/examples/skill/action-list-review/SKILL.md \
+  -o bluebook-package/skills/action-list-review/SKILL.md
+cat > bluebook-package/package.json <<'JSON'
+{
+  "name": "bluebook-practice-package",
+  "version": "0.1.0",
+  "private": true,
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
+JSON
+```
+
+The last segment must be copied as a whole, with the closing `JSON` line on its own. Read both downloaded files first, confirm that the Extension only registers the check command and the Skill contains only the meeting-notes review rules, then continue. The host package Pi provides goes in `peerDependencies`; do not install another copy into `dependencies`. This example has no extra runtime dependencies, so there is no need to run `npm install` in the package directory.
+
+### 2. Install locally and confirm loading
+
+Still in `bluebook-package-practice`, run:
+
+```bash
+pi install --local ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+`pi install` should finish without errors and return to the prompt; `pi list --approve` should list a local source pointing at `bluebook-package` in the project scope. Confirm it, then enter Pi. `--local` writes the declaration into the current project's `.pi/settings.json`; local resources are still read from the original directory, not copied into another one. The `--approve` here is only for practice resources you have already checked; it explicitly approves loading project resources for this run, and it is not a system sandbox. Do not use it to skip inspecting an unfamiliar repository.
+
+Type `/` in Pi's edit area; the command list should show `bluebook-check` and `skill:action-list-review`. Run `/bluebook-check`, and a “Buku Pi Extension has loaded” notification should appear. It runs the teaching command directly, does not depend on the model claiming it has loaded, and does not need a model task to be sent.
+
+### 3. Verify again after removal
+
+Exit with `/quit` and return to the same directory:
+
+```bash
+pi remove --local --approve ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+The list should no longer contain this Package; in a new Pi session, typing `/` should no longer show the two teaching commands either. If they still appear, first check whether resources with the same names are also loaded through a global install or through `-e` and `--skill`. Removing the declaration does not delete the directory you created, so the materials can stay. When the check is done, exit with `/quit`.
+
+On 2026-10-12, in an independent configuration with Pi 1.1.0, I completed the local installation above, the command-list check, the Extension notification, and the list recheck after removal; npm and Git sources and public publishing were not tested. The full packaging rules are in the [pinned Package documentation](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/packages.md).
+
 ### Basis for this chapter
 
 - [Pi Skills](https://pi.dev/docs/latest/skills)
@@ -103,4 +163,4 @@ Pi Packages run with the current user's full system permissions. Besides executa
 - [Pi Packages](https://pi.dev/docs/latest/packages)
 - [The difference between Skill, Extension, and Pi Package](/en/tweets/04-skills-extensions)
 
-The dynamic behavior above was verified on 2026-09-09. The teaching Skill was verified to be loaded temporarily in Pi 0.80.10 on this machine, and appeared in the `skill:action-list-review` command list; resource locations and Pi commands can be updated, so the related official pages are the reference.
+The teaching Skill in the first half keeps its original verification date of 2026-09-09, verified for temporary loading and the `skill:action-list-review` command list in Pi 0.80.10 on this machine. The version and date for the local Package exercise are recorded at the end of that section; resource locations and Pi commands can change, so the matching official pages are the reference.

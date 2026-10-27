@@ -32,6 +32,8 @@ Pi resmi saat ini menyediakan dua jalur pemasangan untuk macOS dan Linux. Keduan
 | Installer resmi | Pemula yang ingin skrip resmi menangani pemeriksaan lingkungan, pemasangan, dan PATH | `curl -fsSL https://pi.dev/install.sh \| sh` | Jalankan ulang installer lalu pilih uninstall |
 | Pemasangan global npm | Pembaca yang sudah mengelola Node.js/npm dan ingin jelas memakai manajer paket | `npm install -g --ignore-scripts @earendil-works/pi-coding-agent` | Uninstall global lewat npm |
 
+Installer resmi Pi 1.1.0 mematok seluruh dependensinya; sejak 1.0.1, paket npm yang diterbitkan tidak lagi mematok dependensi tidak langsung. Setelah pembaruan pada jalur npm berhasil, bisa muncul saran untuk bermigrasi ke installer resmi; cara menanganannya lihat [Manajemen siklus hidup setelah instalasi](/guide/lifecycle-management).
+
 Buku ini merekomendasikan **installer resmi** untuk pemasangan pertama. Installer akan memeriksa Node.js versi 22.19.0 atau lebih baru dan npm; jika lingkungan belum lengkap, ia akan bertanya lebih dulu apakah ingin dibantu memasang. Pelajaran sebelumnya sudah membuat Anda menyelesaikan pemeriksaan itu lebih awal, jadi dalam kondisi normal installer akan langsung masuk ke proses pemasangan Pi.
 
 Pilih dengan mouse **satu baris penuh** di bawah, tekan `Command + C`; klik kembali kursor yang berkedip di terminal, tekan `Command + V`, pastikan domainnya `pi.dev` dan tidak ada teks tambahan, lalu tekan Enter.
@@ -66,7 +68,7 @@ Setelah proses pemasangan selesai, periksa apakah Pi benar-benar bisa dipakai.
 pi --version
 ```
 
-Yang diketik di sini adalah `pi --version`, lalu rangkaian nomor versi yang muncul setelahnya itulah keluarannya. Jika nomor versi muncul dan kursor kembali lagi, bukan `command not found`, berarti lolos. Buku ini tidak menjadikan versi Pi tertentu sebagai syarat permanen; kedua jalur pemasangan diverifikasi pada 2026-09-23, dan selanjutnya mengacu pada [Quickstart resmi Pi](https://pi.dev/docs/latest/quickstart).
+Yang diketik di sini adalah `pi --version`, lalu rangkaian nomor versi yang muncul setelahnya itulah keluarannya. Jika nomor versi muncul dan kursor kembali lagi, bukan `command not found`, berarti lolos. Buku ini tidak menjadikan versi Pi tertentu sebagai syarat permanen. Jalur installer resmi masih mempertahankan catatan verifikasi 2026-09-23; pada 2026-10-12, Pi 1.1.0 versi terkunci dipasang di prefix npm terpisah, dan keluaran versi, peluncuran, `/quit`, serta peluncuran ulang benar-benar dikonfirmasi. Installer resminya tidak dijalankan ulang; selanjutnya mengacu pada [Quickstart resmi Pi](https://pi.dev/docs/latest/quickstart).
 
 ![Ilustrasi: Si Hitam memeriksa tiga peti kayu dengan kaca pembesar, dengan label node --version, npm --version, dan pi --version](/images/01-pi-cek-versi.webp)
 
@@ -91,7 +93,7 @@ pi
 
 Ketiga baris ini dijalankan berurutan. Keluaran `pwd` harus berakhir dengan `/Downloads/pi-practice`; jika pada pelajaran sebelumnya Anda memakai `pi-practice-2`, nama direktori di perintah ini juga harus diganti dengan nama Anda sendiri. Setelah path-nya dipastikan, barulah ketik baris terakhir `pi`.
 
-Saat pertama kali dibuka, Pi mungkin perlu waktu sebentar untuk memuat. Setelah selesai, Anda akan melihat area editor untuk mengetik pesan, dan status bar di bagian bawah menampilkan direktori saat ini serta model. Kini Anda sudah masuk ke antarmuka interaktif Pi dari terminal biasa; jangan mengetik teks status bar di antarmuka Pi sebagai perintah terminal.
+Saat pertama kali dibuka, Pi mungkin perlu waktu sebentar untuk memuat. Pi 1.1.0 memakai antarmuka layar penuh sebagai bawaan. Setelah selesai, Anda akan melihat area editor untuk mengetik pesan, dan status bar di bagian bawah menampilkan direktori saat ini serta model. Kini Anda sudah masuk ke antarmuka interaktif Pi dari terminal biasa; jangan mengetik teks status bar di antarmuka Pi sebagai perintah terminal.
 
 Jika Pi meminta login, itu tidak berarti pemasangannya gagal. Autentikasi ditangani pada pelajaran berikutnya.
 

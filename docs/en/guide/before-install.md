@@ -85,7 +85,7 @@ node --version
 npm --version
 ```
 
-If both lines return version numbers and Node.js is not lower than `22.19.0`, you can move on to the next lesson. This minimum version requirement was verified on 2026-09-23; after it is published, follow the [official Pi Quickstart](https://pi.dev/docs/latest/quickstart).
+If both lines return version numbers and Node.js is not lower than `22.19.0`, you can move on to the next lesson. The minimum version requirement was checked against the pinned Pi 1.1.0 documentation on 2026-10-12; the empty-directory, Node.js, and npm checks were actually run on this machine, with outputs `v24.14.1` and `11.11.0`. The Node.js installation flow was not re-tested, so from here on follow the [official Pi Quickstart](https://pi.dev/docs/latest/quickstart).
 
 For example, the first line might show `v22.19.0` or a higher version, and the second line might show another string of version numbers. The specific numbers may differ; what matters is that both commands produce version numbers, and the cursor returns after each output.
 

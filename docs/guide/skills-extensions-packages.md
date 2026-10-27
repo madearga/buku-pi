@@ -96,6 +96,66 @@ Ketika Anda sudah memahaminya dan ingin agar proyek yang sama menemukannya secar
 Pi Package berjalan dengan izin sistem penuh pengguna saat ini. Selain Extension yang dapat dijalankan, Skill dan sumber daya lain juga dapat mengarahkan Agent menjalankan perintah atau menimbulkan efek samping. Jangan langsung percaya hanya karena namanya “paket” atau “sumber daya komunitas”. Sebelum memasang, periksalah asal, sumber daya, dan isi pemasangan seluruh paket.
 :::
 
+## Praktik: mengemas sumber daya Anda sendiri menjadi Package
+
+Ketika Skill dan Extension yang sama perlu diserahkan ke komputer lain, Anda dapat memasukkannya ke dalam satu direktori yang memuat `package.json`. Bagian ini dulu merangkai direktorinya dan memverifikasinya di komputer sendiri; penyalinan antarmesin serta distribusi lewat Git/npm berada di luar cakupan pengujian bagian ini.
+
+Pi menemukan `extensions/`, `skills/`, `prompts/`, dan `themes/` secara otomatis; direktori yang tidak dibutuhkan boleh dilewatkan. Deklarasi path pada kolom `pi` di manifest baru diperlukan ketika sumber dayanya diletakkan di lokasi lain.
+
+### 1. Merangkai dan memeriksa materi
+
+Di direktori latihan pada terminal biasa, buat satu direktori kosong lain; jika namanya sudah ada, pakai nama baru dan jangan menimpa latihan lama. Unduh [Ekstensi pemeriksa](/examples/extension/bluebook-check.ts) dan <a href="/examples/skill/action-list-review/SKILL.md" download>Skill daftar tindakan</a> yang sudah ada di buku ini:
+
+```bash
+mkdir bluebook-package-practice
+cd bluebook-package-practice
+mkdir -p bluebook-package/extensions bluebook-package/skills/action-list-review
+curl -fL https://pi.argakuka.com/examples/extension/bluebook-check.ts \
+  -o bluebook-package/extensions/bluebook-check.ts
+curl -fL https://pi.argakuka.com/examples/skill/action-list-review/SKILL.md \
+  -o bluebook-package/skills/action-list-review/SKILL.md
+cat > bluebook-package/package.json <<'JSON'
+{
+  "name": "bluebook-practice-package",
+  "version": "0.1.0",
+  "private": true,
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
+JSON
+```
+
+Blok terakhir disalin utuh satu bagian, dan baris penutup `JSON` menempati satu baris sendiri. Baca dulu kedua file yang diunduh, pastikan Extension-nya hanya mendaftarkan perintah pemeriksa dan Skill-nya hanya berisi aturan pengecekan catatan rapat, baru lanjutkan. Paket host yang disediakan Pi diletakkan di `peerDependencies`; jangan memasang salinan lain ke `dependencies`. Contoh ini tidak punya dependensi runtime tambahan, jadi `npm install` tidak perlu dijalankan di direktori paket.
+
+### 2. Memasang lokal dan memastikan termuat
+
+Masih di `bluebook-package-practice`, jalankan:
+
+```bash
+pi install --local ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+`pi install` seharusnya selesai tanpa galat dan prompt kembali muncul; `pi list --approve` seharusnya mencantumkan sumber lokal yang menunjuk ke `bluebook-package` pada cakupan proyek. Konfirmasi dulu barulah masuk ke Pi. `--local` menuliskan deklarasinya ke `.pi/settings.json` proyek saat ini, dan sumber daya lokalnya tetap dibaca dari direktori asal tanpa disalin menjadi salinan lain. `--approve` di sini hanya untuk sumber daya latihan yang sudah diperiksa, yaitu menyetujui secara eksplisit pemuatan sumber daya proyek pada run kali ini, dan bukan sandbox sistem; jangan memakainya untuk melewati pemeriksaan repositori yang tidak dikenal.
+
+Ketik `/` di area edit Pi; daftar perintahnya seharusnya memuat `bluebook-check` dan `skill:action-list-review`. Jalankan `/bluebook-check`, dan seharusnya muncul pemberitahuan “Ekstensi Bluebook telah dimuat”. Perintah ini menjalankan perintah pengajaran secara langsung, tidak bergantung pada klaim model bahwa ia sudah dimuat, dan tidak perlu mengirim tugas model.
+
+### 3. Verifikasi ulang setelah menghapus
+
+Keluar dengan `/quit`, lalu kembali ke direktori yang sama:
+
+```bash
+pi remove --local --approve ./bluebook-package
+pi list --approve
+pi --approve
+```
+
+Daftarnya seharusnya tidak lagi memuat Package ini; ketik `/` di sesi Pi baru dan kedua perintah pengajaran di atas juga seharusnya hilang. Jika masih muncul, periksa dulu apakah sumber daya dengan nama yang sama masih dimuat lewat pemasangan global atau lewat `-e` dan `--skill`. Menghapus deklarasinya tidak menghapus direktori yang Anda buat sendiri, jadi materinya masih bisa dipertahankan. Setelah pemeriksaan, keluar dengan `/quit`.
+
+Pada 2026-10-12, pemasangan lokal di atas, pemeriksaan daftar perintah, pemberitahuan Ekstensi, dan pengecekan ulang daftar setelah penghapusan diselesaikan dengan Pi 1.1.0 pada konfigurasi terpisah; sumber npm/Git dan publikasi publik tidak diuji. Aturan pengemasan lengkapnya lihat [dokumentasi Package versi terkunci](https://github.com/earendil-works/pi/blob/v1.1.0/packages/coding-agent/docs/packages.md).
+
 ### Dasar bab ini
 
 - [Pi Skills](https://pi.dev/docs/latest/skills)
@@ -103,4 +163,4 @@ Pi Package berjalan dengan izin sistem penuh pengguna saat ini. Selain Extension
 - [Pi Packages](https://pi.dev/docs/latest/packages)
 - [Perbedaan Skill, Extension, dan Pi Package](/tweets/04-skills-extensions)
 
-Perilaku dinamis di atas diverifikasi pada 2026-09-09. Skill pengajaran telah diverifikasi dimuat sementara di Pi 0.80.10 pada mesin ini, dan muncul di daftar perintah `skill:action-list-review`; lokasi sumber daya dan perintah Pi dapat diperbarui, jadi acuannya adalah halaman resmi terkait.
+Tanggal verifikasi asli Skill pengajaran pada paruh awal bab ini adalah 2026-09-09, memakai Pi 0.80.10 di komputer sendiri untuk memverifikasi pemuatan sementara dan daftar perintah `skill:action-list-review`. Versi dan tanggal latihan Package lokalnya lihat bagian akhir sub-bab tersebut; lokasi sumber daya dan perintah Pi dapat diperbarui, jadi acuannya adalah halaman resmi terkait.

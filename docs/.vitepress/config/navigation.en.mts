@@ -69,6 +69,13 @@ export const nav = [
               { text: 'Learning notes', link: '/en/journey/' },
               { text: '98-tweet archive', link: '/en/tweets/' }
             ]
+          },
+          {
+            text: "Author's projects",
+            items: [
+              { text: 'Pi Durable Assistant', link: 'https://github.com/xiaomoBoy/pi-durable-assistant' },
+              { text: "All of the author's open source projects", link: 'https://github.com/xiaomoBoy' }
+            ]
           }
         ]
       },
@@ -192,6 +199,11 @@ export const sidebar = {
           ]
         },
         {
+          text: 'Optional case studies',
+          collapsed: true,
+          items: [{ text: 'Recovery from a crash with Pi Durable', link: '/en/cases/durable-assistant' }]
+        },
+        {
           text: 'When things break',
           collapsed: true,
           items: [{ text: 'Pi troubleshooting guide', link: '/en/reference/troubleshooting' }]
@@ -278,6 +290,7 @@ export const sidebar = {
           collapsed: false,
           items: [
             { text: 'All release notes', link: '/en/releases/' },
+            { text: 'Pi 1.1.0 highlights', link: '/en/releases/pi-1-1' },
             { text: 'Pi 1.0.0 highlights', link: '/en/releases/pi-1-0' },
             { text: 'Pi Durable primer', link: '/en/guide/pi-durable' },
             { text: 'Updating Pi safely', link: '/en/guide/lifecycle-management' },

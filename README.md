@@ -181,6 +181,12 @@ docs/en/                   # locale English (path relatif sama dengan edisi Indo
 scripts/                   # pemeriksa konten, SEO, dan tautan
 ```
 
+## Proyek lain penulis
+
+- **[Pi Durable Assistant](https://github.com/xiaomoBoy/pi-durable-assistant)**: Agent pribadi yang bisa di-host sendiri berbasis Pi Durable; tugas berlanjut setelah prosesnya direstart, dengan antarmuka web, Subagent, dan jadwal terjadwal.
+- **[Pi Durable Edge](https://github.com/xiaomoBoy/pi-durable-edge)**: versi Cloudflare dari Agent di atas, tanpa perlu menyewa server (masih eksperimental).
+- Tool open source lainnya ada di [beranda GitHub](https://github.com/xiaomoBoy) penulis.
+
 ## Lisensi & atribusi
 
 - Situs dan konten orisinal: **MIT License** (lihat `LICENSE`, `LICENSE-CONTENT.md`) —

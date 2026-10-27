@@ -85,7 +85,7 @@ Do not modify the input or the two exported HTML files.
 
 ## Key Symptoms
 
-The two sessions do not read each other's conclusions, and only the main session writes `merged.md`. What is practiced here is an auditable structure of task division, not the assumption that Pi's core already has a built-in “Subagent button”. [Lesson 12](/en/guide/subagents) explains the relationship between this manual task division and the Subagent Extension.
+The two sessions do not read each other's conclusions, and only the main session writes `merged.md`. What is practiced here is an auditable structure of task division, not the assumption that Pi's core already has a built-in “Subagent button”. [Lesson 12](/en/guide/subagents) explains the relationship between this manual task division and the Subagent Extension; once you have finished this case study, continue with [How to choose a Subagent extension](/en/guide/subagents#choose-subagents) to check versions, sources, and permission boundaries.
 
 ## Independent Verification
 

@@ -85,7 +85,7 @@ Jangan mengubah input dan kedua file ekspor HTML.
 
 ## Gejala kunci
 
-Kedua sesi tidak saling membaca kesimpulan satu sama lain, dan hanya sesi utama yang menulis `merged.md`. Yang dilatih di sini adalah struktur pembagian tugas yang dapat diaudit, bukan asumsi bahwa inti Pi sudah memiliki “tombol Subagent” bawaan. [Pelajaran 12](/guide/subagents) menjelaskan hubungan antara pembagian tugas manual ini dan Ekstensi Subagent.
+Kedua sesi tidak saling membaca kesimpulan satu sama lain, dan hanya sesi utama yang menulis `merged.md`. Yang dilatih di sini adalah struktur pembagian tugas yang dapat diaudit, bukan asumsi bahwa inti Pi sudah memiliki “tombol Subagent” bawaan. [Pelajaran 12](/guide/subagents) menjelaskan hubungan antara pembagian tugas manual ini dan Ekstensi Subagent; setelah menyelesaikan studi kasus ini, lanjutkan membaca [Cara memilih Ekstensi Subagent](/guide/subagents#choose-subagents) untuk memeriksa versi, asal, dan batas izinnya.
 
 ## Verifikasi independen
 

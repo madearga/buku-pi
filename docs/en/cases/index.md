@@ -54,3 +54,7 @@ These two migration exercises are optional and do not change the CASE 01–08 le
 
 - [From materials to a verifiable draft](/en/cases/content-workflow): build a facts table, a draft awaiting confirmation, and the unknowns from two conflicting materials; suited to content writers.
 - [Repairing a small program](/en/cases/code-repair): first reproduce the two failing tests, fix only the implementation, then verify the four tests and the scope of the change yourself; suited to readers who want to start working with code.
+
+## Optional case studies
+
+- [Observing crash recovery with Pi Durable Assistant](/en/cases/durable-assistant): run a personal Agent based on Pi Durable on your own machine without an API Key, simulate a crash in the middle of a long task, and check whether the task finishes from where it stopped and whether anything runs twice. Suited to hands-on practice after reading the [Pi Durable primer](/en/guide/pi-durable).
